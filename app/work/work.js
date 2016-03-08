@@ -15,6 +15,8 @@ angular.module('myApp.work', ['ngRoute'])
 			name: 'A Guide to House Music',
 			type: 'Web Development, UI',
 			cover: 'img/record.png',
+			cover_size:'90em 60em, cover',
+			cover_pos: '30% 50%',
 			descrip: 'Lol kill me now',
 			show_title: false
 		},
@@ -22,6 +24,8 @@ angular.module('myApp.work', ['ngRoute'])
 			name: 'Modelling the Zombie Apocalypse',
 			type: 'Web Development, UI',
 			cover: 'img/record.png',
+			cover_size:'90em 60em, cover',
+			cover_pos: '55% 50%',
 			descrip: 'Maybe i die',
 			show_title: false
 		},
@@ -29,6 +33,8 @@ angular.module('myApp.work', ['ngRoute'])
 			name: 'Tastemakers Magazine',
 			type: 'Art Direction/Graphic Design',
 			cover: 'img/record.png',
+			cover_size:'90em 60em, cover',
+			cover_pos: '12% 70%',
 			descrip: 'Lol kill me now',
 			show_title: false
 		},
@@ -36,6 +42,8 @@ angular.module('myApp.work', ['ngRoute'])
 			name: 'Shutterstock',
 			type: 'Graphic Design',
 			cover: 'img/record.png',
+			cover_size:'90em 60em, cover',
+			cover_pos: '10% 90%',
 			descrip: 'Lol kill me now',
 			show_title: false
 		},
@@ -43,6 +51,8 @@ angular.module('myApp.work', ['ngRoute'])
 			name: 'Spot',
 			type: 'Web Development, UI',
 			cover: 'img/record.png',
+			cover_size:'90em 60em, cover',
+			cover_pos: '2% 30%',
 			descrip: 'Lol kill me now',
 			show_title: false
 		}

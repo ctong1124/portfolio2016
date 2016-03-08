@@ -271,22 +271,44 @@ p {
 #work .tiles .tile {
   height: 24em;
   border: .5em solid white;
-  background-size: 90em 60em, cover;
   background-repeat: no-repeat;
-  background-position: 25% 50%;
+}
+#work .tiles .overlay {
+  height: 100%;
+  background: black;
+  opacity:0;
+  -webkit-transition: opacity .25s ease;
+  -moz-transition: opacity .25s ease;
+  position: relative;
 }
 
+#work .tiles .overlay:hover {
+  opacity:.75;
+}
+
+
 #work .tiles .tile .info {
-  
   display: none;
-  
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 1em 2em;
+  color: white;
 }
 
 #work .tiles .tile:hover .info {
   display: block;
-  
 }
 
+#work .tiles .tile:hover .info h2{
+  line-height: 1.25em;
+  margin: 0;
+}
+
+#work .tiles .tile:hover .info p {
+  line-height: 1.8em;
+  margin: 0;
+}
 
 
 

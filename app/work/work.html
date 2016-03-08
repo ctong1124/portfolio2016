@@ -10,12 +10,14 @@
 
 <div class="section tiles">
 	<div class="section-fixed" ng-repeat="tile in tiles">
-		<div class="col6 tile" style="background-image: url({{tile.cover}})" ng-mouseenter="hover(tile)" ng-mouseleave="hover(tile)" 
-		>
-			<div class="info" ng-show="tile.show_title">
-				<p>{{tile.name}}</p>
+		<div class="col6 tile " style="background-image: url({{tile.cover}}); background-size: {{tile.cover_size}};background-position:{{tile.cover_pos}};">
+			<div class="overlay">
+			<div class="info">
+				<h2>{{tile.name}}</h2>
+				<p>{{tile.type}}</p>
 
 			</div>
+		</div>
 		</div>
 		
 	</div>
