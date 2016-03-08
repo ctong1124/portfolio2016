@@ -1,0 +1,24 @@
+<div id="work" ng-controller="WorkCtrl">
+
+<div class="section banner mar-bottom-med">
+	<div class="section-fixed">
+		<div class="col12">
+			<h2>I hope I die here.</h2>
+		</div>
+	</div>
+</div>
+
+<div class="section tiles">
+	<div class="section-fixed" ng-repeat="tile in tiles">
+		<div class="col6 tile" style="background-image: url({{tile.cover}})" ng-mouseenter="hover(tile)" ng-mouseleave="hover(tile)" 
+		>
+			<div class="info" ng-show="tile.show_title">
+				<p>{{tile.name}}</p>
+
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+</div>
