@@ -10,27 +10,46 @@
 
 <div class="section tiles">
 	<div class="section-fixed" ng-repeat="tile in tiles">
-		<div class="col6 tile " style="background-image: url({{tile.cover}}); background-size: {{tile.cover_size}};background-position:{{tile.cover_pos}};"  ng-mouseenter="hover(tile)" ng-mouseleave="hover(tile)" >
-			<!-- <div class="blackoverlay" ng-show="tile.black_overlay"> -->
-				<div class="redoverlay" ng-show="tile.show_title">
+		<div class="{{tile.col_size}} tile" style="background-image: url({{tile.cover}}); background-size: {{tile.cover_size}};background-position:{{tile.cover_pos}};"  ng-mouseenter="hover(tile)" ng-mouseleave="hover(tile)" ng-click="click(tile)" ng-show="!tile.show_expanded">
+				<div ng-class="{ 'blackoverlay': tile.black_overlay, 'redoverlay': tile.show_title }">
 					<div class="info" ng-show="tile.show_title">
 						<h2>{{tile.name}}</h2>
 						<p>{{tile.type}}</p>
 					</div>
 				</div>
-			<!-- </div> -->
+		</div>
+		<div class="col12 expanded" ng-show="tile.show_expanded" >
+			<div class="exit" ng-click="clickX(tile)">
+				X
+			</div>
+			<div class="container slider">
+			    <div ng-repeat="slide in slides" class="slide slide-animation" style="background-image: url({{slide.image}}); background-size: {{slide.size}};background-position:{{slide.pos}};" ng-hide="!isCurrentSlideIndex($index)">
+			    </div>
+
+			    <a class="arrow prev" ng-click="nextSlide()"></a>
+   				<a class="arrow next" ng-click="prevSlide()"></a>
+			    <nav class="nav">
+		            <div class="wrapper">
+		                <ul class="dots">
+		                    <li class="dot" ng-repeat="slide in slides">
+		                        <a  ng-class="{'active':isCurrentSlideIndex($index)}"
+		                          ng-click="setCurrentSlideIndex($index);">{{slide.description}}</a>
+		                    </li>
+		                </ul>
+		            </div>
+		        </nav>
+			</div>
+			<div class="description">
+				<h2>{{tile.name}}</h2>
+				<h5>{{tile.type}}</h5>
+				<p>{{tile.descrip}}</p>
+			</div>
 		</div>
 	
 
 
 		
-	</div>
-	<div class="section-fixed">
-
-		<div class="col12 expanded">
-				
-		</div>
-	</div>
+	</div> 
 
 </div>
 

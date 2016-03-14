@@ -272,6 +272,7 @@ p {
   height: 24em;
   border: .5em solid white;
   background-repeat: no-repeat;
+  cursor:pointer;
 }
 #work .tiles .blackoverlay {
   height: 100%;
@@ -337,9 +338,177 @@ p {
 }
 
 #work .tiles .expanded {
-  height: 20em;
-  background-color: #CCCCCC;
+  /*height: 40em;*/
+  border-right: 1em solid white;
+  background-color: black;
+  margin: .5em;
+  opacity: 1;
+  -webkit-transition:all linear 10s;
+  transition:all linear 10s;
 }
+
+.expanded.ng-hide {
+  height: 0em;
+  opacity: 0;
+  background-color: blue;
+}
+
+.expanded.ng-hide-add, .expanded.ng-hide-remove {
+    -webkit-transition:all linear 10s;
+  transition:all linear 10s;
+  }
+
+
+
+
+
+#work .tiles .expanded .exit{
+  padding: .4em .75em;
+  color: white;
+  float: right;
+  margin: .5em;
+  cursor: pointer;
+}
+
+.ng-hide {
+  display:none!important;
+}
+
+/*slider heyo*/
+
+
+#work .slider .slide{
+  height: 30em;
+  /*border: .5em solid white;*/
+  background-repeat: no-repeat;
+  background-color: black;
+}
+
+#work .slider a {
+  cursor: pointer;
+}
+
+#work .slider .arrow {
+    position: absolute;
+    z-index: 1002;
+    display: block;
+    top: 50%;
+    margin-top: -35px;
+    width: 36px;
+    height: 71px;
+    outline: none;
+    cursor: pointer;
+    background: url(img/blank.gif) no-repeat;
+}
+
+#work .slider .arrow.prev {
+    opacity: 0.2;
+    left: 20px;
+    background-image: url(img/paddle_prev_999.png);
+    transition: 0.2s linear all;
+}
+
+#work .slider .arrow.next {
+    opacity: 0.2;
+    right: 20px;
+    background-image: url(img/paddle_next_999.png);
+    transition: 0.2s linear all;
+}
+
+#work .slider .arrow.prev:hover {
+    opacity: 1;
+    background-image: url(img/paddle_prev_fff.png);
+}
+
+#work .slider .arrow.next:hover {
+    opacity: 1;
+    background-image: url(img/paddle_next_fff.png);
+}
+
+
+#work .slider .nav {
+    text-align: center;
+    display: block;
+    /*position: absolute;*/
+    z-index: 1002;
+    left: 0;
+    bottom: -4px;
+    right: 0;
+    height: 48px;
+}
+
+#work .slider .nonDraggableImage{
+    -webkit-user-drag: none;
+}
+
+#work .slider .nav .wrapper {
+    margin: 0 auto;
+    width: 100%;
+    padding: 1em 0 .8em;
+}
+
+#work .slider .nav ul {
+    margin: 0;
+    width: 90%;
+}
+
+#work .slider .nav .dot, .nav .dot a {
+    display: inline-block;
+    zoom: 1;
+}
+
+#work .slider .dots .dot {
+    position: relative;
+    margin: 0 8px;
+    width: 12px;
+    height: 12px;
+}
+
+#work .slider .dots .dot a {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 6px;
+    height: 6px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background: #FFF;
+    border: 1px solid transparent;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: background-color 0.25s, border-color 0.25s;
+    -moz-transition: background-color 0.25s, border-color 0.25s;
+    transition: background-color 0.25s, border-color 0.25s;
+}
+
+#work .slider .dots .dot a.active {
+    border-color: #FFF;
+    background-color: transparent;
+}
+
+#work .expanded .description {
+  margin: 2em;
+}
+
+#work .expanded .description h2, 
+#work .expanded .description h5,
+#work .expanded .description p{
+  color: white;
+}
+
+#work .expanded .description h2,
+#work .expanded .description h5{
+  margin: 0;
+}
+
+
+/*experience*/
 
 
 

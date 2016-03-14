@@ -9,6 +9,18 @@ angular.module('myApp.experience', ['ngRoute'])
   });
 }])
 
-.controller('ExperienceCtrl', [function() {
+.controller('ExperienceCtrl', ['$scope', function($scope) {
+	$scope.schools = [
+		{
+			name: 'Homestead High School',
+			location: 'Cupertino, CA',
+			dates: 'Class of 2011'
+		},
+		{
+			name: 'Homestead High School',
+			location: 'Cupertino, CA',
+			dates: 'Class of 2011'
+		}
+	]
 
 }]);
