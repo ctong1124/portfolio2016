@@ -202,6 +202,10 @@ p {
   font-size: 1em;
 }
 
+body {
+  background-color: #F4F7F5
+}
+
 
 .mar-bottom-small {
   margin-bottom: 2em;
@@ -214,6 +218,8 @@ p {
 .mar-bottom-large {
   margin-bottom: 8em;
 }
+
+
 
 
 
@@ -248,14 +254,26 @@ p {
 .header .header-right a {
   text-decoration: none;
   padding-left: 2em;
-  color: black;
-  font-size: .8em;
+  font-size: .8em;  
+}
+
+.header a {
+  color: #08090A;
+  -webkit-transition:color .25s ease;
+  -moz-transition: color .25s ease;
+  -o-transition: color .25s ease;
+  transition: color .25s ease;
+}
+
+.header a:hover {
+  color: #9FA4A9;
+
 }
 
 /*WORK PAGE*/
 
 #work .banner {
-  background-color: black;
+  background-color: #08090A;
   padding: 10em 0;
 }
 
@@ -264,27 +282,27 @@ p {
 }
 
 #work .banner h2 {
-  color: white;
+  color: #F4F7F5;
 }
 
 
 #work .tiles .tile {
   height: 24em;
-  border: .5em solid white;
+  border: .5em solid #F4F7F5;
   background-repeat: no-repeat;
   cursor:pointer;
 }
 #work .tiles .blackoverlay {
   height: 100%;
-  background: black;
+  background: #08090A;
   opacity:.75;
   position: relative;
 }
 
-#work .tiles .redoverlay {
+#work .tiles .showoverlay {
   height: 100%;
-  background: red;
-  opacity:.75;
+  background: #C2D3CD;
+  opacity:.95;
   
   position: relative;
 }
@@ -320,7 +338,7 @@ p {
   top: 50%;
   transform: translateY(-50%);
   margin: 1em 2em;
-  color: white;
+  color: #F4F7F5;
 }
 
 #work .tiles .tile/*:hover*/ .info {
@@ -339,8 +357,8 @@ p {
 
 #work .tiles .expanded {
   /*height: 40em;*/
-  border-right: 1em solid white;
-  background-color: black;
+  border-right: 1em solid #F4F7F5;
+  background-color: #08090A;
   margin: .5em;
   opacity: 1;
   -webkit-transition:all linear 10s;
@@ -364,7 +382,7 @@ p {
 
 #work .tiles .expanded .exit{
   padding: .4em .75em;
-  color: white;
+  color: #F4F7F5;
   float: right;
   margin: .5em;
   cursor: pointer;
@@ -379,9 +397,9 @@ p {
 
 #work .slider .slide{
   height: 30em;
-  /*border: .5em solid white;*/
+  /*border: .5em solid #F4F7F5;*/
   background-repeat: no-repeat;
-  background-color: black;
+  background-color: #08090A;
 }
 
 #work .slider a {
@@ -499,7 +517,7 @@ p {
 #work .expanded .description h2, 
 #work .expanded .description h5,
 #work .expanded .description p{
-  color: white;
+  color: #F4F7F5;
 }
 
 #work .expanded .description h2,
@@ -509,7 +527,75 @@ p {
 
 
 /*experience*/
+#exp h2,
+#exp h3,
+#exp h4,
+#exp p {
+  padding-left: 3rem;
+  color: #F4F7F5;
+}
 
+#exp .education {
+  background-color: #847E89;
+}
+
+#exp .jobs {
+  background-color: #9FA4A9;
+}
+
+#exp .education .school,
+#exp .jobs .job {
+  /*background: linear-gradient( to right, transparent .5%, black .5%, black .6%, transparent .8% );*/
+  background: linear-gradient( to right, transparent .75%, #C2D3CD .75%, #C2D3CD 1%, transparent 1% );
+  padding-bottom: 3em;
+}
+
+#exp .education h3{
+  margin-top:2em;
+}
+
+#exp .exp-header h4,
+#exp .exp-header p  {
+  margin: 0;
+}
+
+#exp  .circle { 
+  /*background-color: #F4F7F5;*/
+  border: 3px solid #C2D3CD;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  margin: .5em 0 .75em 0;
+  float: left;
+  position: absolute;
+}
+
+#exp .education .circle {
+  background-color: #847E89;
+}
+
+#exp .jobs .circle {
+  background-color: #9FA4A9;
+}
+
+#exp .hidetop {
+  float: left;
+  background-color: #847E89;
+  height: 1em;
+  width: 1em;
+}
+
+#exp .jobs h3 {
+  background: linear-gradient( to right, transparent .75%, #C2D3CD .75%, #C2D3CD 1%, transparent 1% );
+  margin: 0;
+  /*padding-top: 2em;*/
+  padding-bottom: 1em ;
+}
+
+/*#exp .exp-description p {
+  padding: 0;
+}
+*/
 
 
 

@@ -15,39 +15,39 @@ angular.module('myApp.work', ['ngRoute'])
   
 	$scope.tiles = [
 		{
-			name: 'Spot',
-			type: 'Web Development, UI',
-			col_size: 'col6',
-			cover: 'img/spot_iphone.jpg',
-			cover_size:'60em 40em, cover',
-			cover_pos: '80% 50%',
-			descrip: 'Lol kill me now',
+			name: "Spot",
+			type: "Web Development, UI",
+			col_size: "col6",
+			cover: "img/spot_iphone.jpg",
+			cover_size:"60em 40em, cover",
+			cover_pos: "80% 50%",
+			descrip: "Lol kill me now",
 			show_title: false,
 			black_overlay: false,
 			show_expanded: false
 		},
 		{
-			name: 'A Guide to House Music',
-			type: 'Web Development, UI',
-			col_size: 'col6',
-			cover: 'img/record.png',
-			cover_size:'90em 60em, cover',
-			cover_pos: '65% 50%',
-			descrip: 'Lol kill me now',
+			name: "A Guide to House Music",
+			type: "Web Development, UI",
+			col_size: "col6",
+			cover: "img/record.png",
+			cover_size:"90em 60em, cover",
+			cover_pos: "65% 50%",
+			descrip: "Lol kill me now",
 			show_title: false,
 			black_overlay: false,
 			show_expanded: false
 		},
 		{
-			name: 'Shutterstock',
-			type: 'Graphic Design',
-			col_size: 'col6',
-			cover: 'img/moo_cover.png',
-			// cover_size:'45em 30em, cover',
-			// cover_pos: '20% 70%',
-			cover_size:'60em 30em, cover',
-			cover_pos: '72% 70%',
-			descrip: 'Lol kill me now',
+			name: "Shutterstock",
+			type: "Graphic Design",
+			col_size: "col6",
+			cover: "img/moo_cover.png",
+			// cover_size:"45em 30em, cover",
+			// cover_pos: "20% 70%",
+			cover_size:"60em 30em, cover",
+			cover_pos: "72% 70%",
+			descrip: "Lol kill me now",
 			show_title: false,
 			black_overlay: false,
 			show_expanded: false
@@ -56,26 +56,26 @@ angular.module('myApp.work', ['ngRoute'])
 		
 
 		{
-			name: 'Modelling the Zombie Apocalypse',
-			type: 'Web Development, UI',
-			col_size: 'col6',
-			cover: 'img/ipad_apocalypse.jpg',
-			cover_size:'45em 29em, cover',
-			cover_pos: '40% 100%',
-			descrip: 'Maybe i die',
+			name: "Modelling the Zombie Apocalypse",
+			type: "Web Development, UI",
+			col_size: "col6",
+			cover: "img/ipad_apocalypse.jpg",
+			cover_size:"45em 29em, cover",
+			cover_pos: "40% 100%",
+			descrip: "Maybe i die",
 			show_title: false,
 			black_overlay: false,
 			show_expanded: false
 		},
 		
 		{
-			name: 'Tastemakers Magazine',
-			type: 'Art Direction/Graphic Design',
-			cover: 'img/tmm_mockup.jpg',
-			col_size: 'col6',
-			cover_size:'66em 44em, cover',
-			cover_pos: '50% 40%',
-			descrip: 'Lol kill me now',
+			name: "Tastemakers Magazine",
+			type: "Art Direction/Graphic Design",
+			cover: "img/tmm_mockup.jpg",
+			col_size: "col6",
+			cover_size:"66em 44em, cover",
+			cover_pos: "50% 40%",
+			descrip: "Lol kill me now",
 			show_title: false,
 			black_overlay: false,
 			show_expanded: false
@@ -133,40 +133,40 @@ angular.module('myApp.work', ['ngRoute'])
 	// slider
     $scope.slides = [
 		{
-			image: 'img/spot_iphone.jpg',
-			size:'60em 40em, cover',
-			pos: 'center',
-			description: 'Lol kill me now'
+			image: "img/spot_iphone.jpg",
+			size:"60em 40em, cover",
+			pos: "center",
+			description: "Lol kill me now"
 		},
 		{
 			
-			image: 'img/record.png',
-			size:'60em 40em, cover',
-			pos: 'center',
-			description: 'Lol kill me now',
-			
-		},
-		{
-			
-			image: 'img/moo_cover.png',
-			size:'60em 30em, cover',
-			pos: 'center',
-			description: 'Lol kill me now',
+			image: "img/record.png",
+			size:"60em 40em, cover",
+			pos: "center",
+			description: "Lol kill me now",
 			
 		},
 		{
 			
-			image: 'img/ipad_apocalypse.jpg',
-			size:'60em 40em, cover',
-			pos: 'center',
-			description: 'Maybe i die',
+			image: "img/moo_cover.png",
+			size:"60em 30em, cover",
+			pos: "center",
+			description: "Lol kill me now",
+			
 		},
 		{
 			
-			image: 'img/tmm_mockup.jpg',
-			size:'66em 44em, cover',
-			pos: 'center',
-			description: 'Lol kill me now',
+			image: "img/ipad_apocalypse.jpg",
+			size:"60em 40em, cover",
+			pos: "center",
+			description: "Maybe i die",
+		},
+		{
+			
+			image: "img/tmm_mockup.jpg",
+			size:"66em 44em, cover",
+			pos: "center",
+			description: "Lol kill me now",
 			
 		},
 		

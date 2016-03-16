@@ -11,7 +11,7 @@
 <div class="section tiles">
 	<div class="section-fixed" ng-repeat="tile in tiles">
 		<div class="{{tile.col_size}} tile" style="background-image: url({{tile.cover}}); background-size: {{tile.cover_size}};background-position:{{tile.cover_pos}};"  ng-mouseenter="hover(tile)" ng-mouseleave="hover(tile)" ng-click="click(tile)" ng-show="!tile.show_expanded">
-				<div ng-class="{ 'blackoverlay': tile.black_overlay, 'redoverlay': tile.show_title }">
+				<div ng-class="{ 'blackoverlay': tile.black_overlay, 'showoverlay': tile.show_title }">
 					<div class="info" ng-show="tile.show_title">
 						<h2>{{tile.name}}</h2>
 						<p>{{tile.type}}</p>

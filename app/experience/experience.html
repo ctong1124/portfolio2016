@@ -1,7 +1,43 @@
 <div id="exp">
 	<div class="section education">
 		<div class="section-fixed">
-			<h2>Education</h2>
+			<h3>Education</h3>
+
+			<div class="school" ng-repeat="school in schools">
+				<div ng-class='{hidetop:$first}'>
+				<div class="circle"></div>
+				</div>
+				<div class="exp-header">
+					<h4>{{school.name}} </h4> 
+					<p style="font-style: italic;">{{school.location}}</p>
+					<p>{{school.dates}}</p>
+				</div>
+
+				<div class="exp-description" ng-repeat="dict in school.description">
+					<div ng-repeat="(key, value) in dict">
+						<p><span style="font-weight: 700;">{{key}}</span>{{value}}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section jobs">
+		<div class="section-fixed">
+			<h3>   </h3>
+			<h3>   </h3>
+			<h3>Experience</h3>
+			<div class="job" ng-repeat="job in jobs">
+				<div class="circle"></div>
+				<div class="exp-header">
+					<h4>{{job.name}} </h4> 
+					<p style="font-style: italic;">{{job.location}}</p>
+					<p>{{job.dates}}</p>
+				</div>
+
+				<div class="exp-description" ng-repeat="bullet in job.description">
+					<p>{{bullet}}</p>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
