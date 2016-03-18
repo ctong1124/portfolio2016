@@ -1,5 +1,7 @@
 'use strict';
 
+var $location;
+
 angular.module('myApp.work', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
@@ -9,13 +11,68 @@ angular.module('myApp.work', ['ngRoute'])
   });
 }])
 
-.controller('WorkCtrl', ['$scope', function($scope) {
+.service('anchorSmoothScroll', function(){
+    
+    this.scrollTo = function(eID) {
+
+        // This scrolling function 
+        // is from http://www.itnewb.com/tutorial/Creating-the-Smooth-Scroll-Effect-with-JavaScript
+        
+        var startY = currentYPosition();
+        var stopY = elmYPosition(eID);
+        var distance = stopY > startY ? stopY - startY : startY - stopY;
+        if (distance < 100) {
+            scrollTo(0, stopY); return;
+        }
+        var speed = Math.round(distance / 100);
+        if (speed >= 20) speed = 20;
+        var step = Math.round(distance / 25);
+        var leapY = stopY > startY ? startY + step : startY - step;
+        var timer = 0;
+        if (stopY > startY) {
+            for ( var i=startY; i<stopY; i+=step ) {
+                setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+                leapY += step; if (leapY > stopY) leapY = stopY; timer++;
+            } return;
+        }
+        for ( var i=startY; i>stopY; i-=step ) {
+            setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+            leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
+        }
+        
+        function currentYPosition() {
+            // Firefox, Chrome, Opera, Safari
+            if (self.pageYOffset) return self.pageYOffset;
+            // Internet Explorer 6 - standards mode
+            if (document.documentElement && document.documentElement.scrollTop)
+                return document.documentElement.scrollTop;
+            // Internet Explorer 6, 7 and 8
+            if (document.body.scrollTop) return document.body.scrollTop;
+            return 0;
+        }
+        
+        function elmYPosition(eID) {
+            var elm = document.getElementById(eID);
+            var y = elm.offsetTop;
+            var node = elm;
+            while (node.offsetParent && node.offsetParent != document.body) {
+                node = node.offsetParent;
+                y += node.offsetTop;
+            } return y;
+        }
+
+    };
+    
+})
+
+.controller('WorkCtrl', ['$scope', '$location', function($scope, $location, anchorSmoothScroll) {
 	
     // $scope.hoverActive = false;
   
 	$scope.tiles = [
 		{
 			name: "Spot",
+			idee: "Spot",
 			type: "Web Development, UI",
 			col_size: "col6",
 			cover: "img/spot_iphone.jpg",
@@ -28,6 +85,7 @@ angular.module('myApp.work', ['ngRoute'])
 		},
 		{
 			name: "A Guide to House Music",
+			idee: "A",
 			type: "Web Development, UI",
 			col_size: "col6",
 			cover: "img/record.png",
@@ -40,6 +98,7 @@ angular.module('myApp.work', ['ngRoute'])
 		},
 		{
 			name: "Shutterstock",
+			idee: "Shutterstock",
 			type: "Graphic Design",
 			col_size: "col6",
 			cover: "img/moo_cover.png",
@@ -57,6 +116,7 @@ angular.module('myApp.work', ['ngRoute'])
 
 		{
 			name: "Modelling the Zombie Apocalypse",
+			idee: "Modelling",
 			type: "Web Development, UI",
 			col_size: "col6",
 			cover: "img/ipad_apocalypse.jpg",
@@ -70,6 +130,7 @@ angular.module('myApp.work', ['ngRoute'])
 		
 		{
 			name: "Tastemakers Magazine",
+			idee: "Tastemakers",
 			type: "Art Direction/Graphic Design",
 			cover: "img/tmm_mockup.jpg",
 			col_size: "col6",
@@ -113,10 +174,28 @@ angular.module('myApp.work', ['ngRoute'])
 		});
 
 		tile.show_expanded = true;
+
+
 		return tile.show_expanded;
 
 			
 	    };
+
+	
+
+	$scope.gotoElement = function (eID){
+		// var eID = tile.idee;
+      // set the location.hash to the id of
+      // the element you wish to scroll to.
+      console.log(eID);
+      $location.hash('a');
+ 		
+ 		
+      // call $anchorScroll()
+      anchorSmoothScroll.scrollTo(eID);
+      
+    };
+
 
 	$scope.clickX = function(tile) {
 		angular.forEach($scope.tiles, function(thistile, key) {
@@ -191,7 +270,10 @@ angular.module('myApp.work', ['ngRoute'])
         $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : $scope.slides.length - 1;
     };
 
+
+
 }])
+
 .animation('.slide-animation', function () {
         return {
             addClass: function (element, className, done) {
