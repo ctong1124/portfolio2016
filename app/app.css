@@ -101,7 +101,7 @@ textarea {
 }
 
 .section-fixed {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     /*margin-left: auto;
     margin-right: auto;
@@ -283,6 +283,10 @@ body {
 
 #work .banner h2 {
   color: #F4F7F5;
+}
+
+#work .tiles {
+  margin-bottom: 7em;
 }
 
 
@@ -527,6 +531,15 @@ body {
 
 
 /*experience*/
+#exp .section-fixed {
+  width:65%;
+}
+
+#exp .exp-description {
+
+  width: 80%;
+}
+
 #exp h2,
 #exp h3,
 #exp h4,
@@ -545,18 +558,26 @@ body {
 
 #exp .education .school,
 #exp .jobs .job {
-  /*background: linear-gradient( to right, transparent .5%, black .5%, black .6%, transparent .8% );*/
-  background: linear-gradient( to right, transparent .75%, #C2D3CD .75%, #C2D3CD 1%, transparent 1% );
-  padding-bottom: 3em;
+  background: linear-gradient( to right, transparent .8%, #C2D3CD .8%, #C2D3CD 1.25%, transparent 1.25% );
+  padding-bottom: 5em;
 }
 
 #exp .education h3{
-  margin-top:2em;
+  margin: 4em 0 2em 0;
+}
+
+#exp .exp-header {
+  padding-bottom: 1.25em;
 }
 
 #exp .exp-header h4,
 #exp .exp-header p  {
   margin: 0;
+}
+
+#exp .exp-description p {
+  margin: .75em 0;
+  line-height: 1.5em;
 }
 
 #exp  .circle { 
@@ -586,7 +607,7 @@ body {
 }
 
 #exp .jobs h3 {
-  background: linear-gradient( to right, transparent .75%, #C2D3CD .75%, #C2D3CD 1%, transparent 1% );
+  background:linear-gradient( to right, transparent .8%, #C2D3CD .8%, #C2D3CD 1.25%, transparent 1.25% );
   margin: 0;
   /*padding-top: 2em;*/
   padding-bottom: 1em ;
@@ -596,6 +617,110 @@ body {
   padding: 0;
 }
 */
+
+/*skills*/
+
+#skills .skills {
+  background-color: #C2D3CD;
+  padding-bottom: 5em;
+
+}
+
+#skills h2, 
+#skills h3, 
+#skills p {
+  color: #F4F7F5;
+}
+
+#skills .skills h3 {
+  margin: 4em 0 2em 0;
+}
+
+#skills .interests h3 {
+  margin: 2em 0 2em 0;
+}
+
+#skills .section-fixed {
+  width: 60%;
+}
+
+#skills .xaxis {
+  text-align: center;
+  border-bottom: 1px solid #F4F7F5;
+}
+
+#skills .xaxis-bot {
+  text-align: center;
+  border-top: 1px solid #F4F7F5;
+}
+
+#skills .beg,
+#skills .int,
+#skills .adv{
+  /*display: inline;*/
+  text-transform: uppercase;
+  font-size: .75em;
+  color: #F4F7F5;
+
+}
+
+#skills .beg {
+  float: left;
+  padding-top: .4em;
+
+}
+
+#skills .int {
+  display: inline-block;
+  margin:0 auto;
+}
+
+
+
+#skills .xaxis .int {
+  padding-bottom: .7em;
+}
+
+#skills .adv {
+  float: right;
+    padding-top: .4em;
+
+}
+
+#skills .bar {
+  background-color: #847E89;
+  padding: .5em;
+  margin: 1em 0;
+  cursor: pointer;
+
+}
+
+#skills .bar:hover p{
+  color: #C2D3CD;
+}
+
+#skills .bar p {
+  margin: 0;
+  color: #F4F7F5;
+  padding-left: 1em;
+  -webkit-transition:color .25s ease;
+  -moz-transition: color .25s ease;
+  -o-transition: color .25s ease;
+  transition: color .25s ease;
+}
+
+#skills .examples {
+  margin: 0 0 3em 1em;
+}
+
+#skills .examples .example p{
+  margin: .5em 0;
+}
+
+#skills .interests {
+  background-color: #9FA4A9;
+  padding-bottom: 6em;
+}
 
 
 

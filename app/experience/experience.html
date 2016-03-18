@@ -34,8 +34,10 @@
 					<p>{{job.dates}}</p>
 				</div>
 
-				<div class="exp-description" ng-repeat="bullet in job.description">
-					<p>{{bullet}}</p>
+				<div class="exp-description" ng-repeat="dict in job.description">
+					<div ng-repeat="(key, value) in dict">
+						<p><span style="font-weight: 700;">{{key}}</span>{{value}}</p>
+					</div>
 				</div>
 			</div>
 		</div>
