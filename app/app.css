@@ -313,29 +313,7 @@ body {
   position: relative;
 }
 
-.fadein,
-.fadeout {
-  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
-  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
-  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
-  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
-}
 
-.fadein.ng-hide-remove,
-.fadeout.ng-hide-add.ng-hide-add-active {
-  opacity: 0;
-  display: block !important;
-}
-
-.fadeout.ng-hide-add,
-.fadein.ng-hide-remove.ng-hide-remove-active {
-  opacity: 1;
-  display: block !important;
-}
-
-#work .tiles .black-overlay/*:hover*/ {
-  /*opacity:.75;*/
-}
 
 
 #work .tiles .tile .info {
@@ -361,26 +339,80 @@ body {
   margin: 0;
 }
 
-#work .tiles .expanded {
-  /*height: 40em;*/
+/*#work .tiles .expanded {
+  display: none;
+  height: 0em;
+  opacity: 0;
+  -webkit-transition:all linear 2s;
+  transition:all linear 2s;
+}
+*/
+
+
+#work .tiles .expanded{
+ /* height: 40em;
+  display: block;*/
+  border-right: 1em solid #F4F7F5;
+  background-color: #08090A;
+  margin: .5em;
+  /*opacity: 1;*/
+  /*-webkit-transition:all linear 2s;
+  transition:all linear 2s;*/
+}
+
+#work .tiles .fadein,
+#work .tiles .fadeout {
+  -webkit-transition:all linear .3s;
+  -moz-transition:all linear .3s;
+  -o-transition:all linear .3s;
+  transition:all linear .3s;
+}
+
+#work .tiles .fadein.ng-hide-remove,
+#work .tiles .fadeout.ng-hide-add.ng-hide-add-active {
+  /*width: 0;*/
+  opacity: 0;
+  display: block !important;
+}
+
+#work .tiles .fadeout.ng-hide-add,
+#work .tiles .fadein.ng-hide-remove.ng-hide-remove-active {
+  /*width: 100%;*/
+  opacity: 1;
+  display: block !important;
+}
+
+
+
+/*#work .tiles .expanded.show {
+  background-color: blue;
+  -webkit-transition:all linear 2s;
+  transition:all linear 2s;
+}
+
+
+
+#work .tiles .expanded{
+  height: 40em;
+  display: block;
   border-right: 1em solid #F4F7F5;
   background-color: #08090A;
   margin: .5em;
   opacity: 1;
-  -webkit-transition:all linear 10s;
-  transition:all linear 10s;
-}
+  -webkit-transition:all linear  2s;
+  transition:all linear 2s;
+}*/
 
-.expanded.ng-hide {
+/*.expanded.ng-hide {
   height: 0em;
   opacity: 0;
   background-color: blue;
-}
+}*/
 
-.expanded.ng-hide-add, .expanded.ng-hide-remove {
+/*.expanded.ng-hide-add, .expanded.ng-hide-remove {
     -webkit-transition:all linear 10s;
   transition:all linear 10s;
-  }
+  }*/
 
 
 
@@ -394,9 +426,6 @@ body {
   cursor: pointer;
 }
 
-.ng-hide {
-  display:none!important;
-}
 
 /*slider heyo*/
 
@@ -721,6 +750,27 @@ body {
 
 #skills .examples .example p{
   margin: .5em 0;
+}
+
+#skills .fadein,
+#skills .fadeout {
+  -webkit-transition:all linear .3s;
+  -moz-transition:all linear .3s;
+  -o-transition:all linear .3s;
+  transition:all linear .3s;
+}
+
+#skills .fadein.ng-hide-remove,
+#skills .fadeout.ng-hide-add.ng-hide-add-active {
+  opacity: 0;
+  display: block !important;
+}
+
+#skills .fadeout.ng-hide-add,
+#skills .fadein.ng-hide-remove.ng-hide-remove-active {
+  
+  opacity: 1;
+  display: block !important;
 }
 
 #skills .interests {

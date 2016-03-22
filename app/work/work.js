@@ -2,7 +2,7 @@
 
 
 
-angular.module('myApp.work', ['ngRoute'])
+angular.module('myApp.work', ['ngRoute','ngAnimate'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/work', {
@@ -123,28 +123,30 @@ angular.module('myApp.work', ['ngRoute'])
 
 		tile.show_expanded = true;
 
-
-		
-		
 		return tile.show_expanded;
 
 			
 	    };
 
 	
-
-
-
-	$scope.clickX = function(tile) {
-		angular.forEach($scope.tiles, function(thistile, key) {
+	$scope.clickXHelper = function() {
+			angular.forEach($scope.tiles, function(thistile, key) {
 			//black out other tiles
 			thistile.black_overlay =!thistile.black_overlay;
 			//change col size back down
 			thistile.col_size = 'col6';
-
 		});	
+	} 
+
+
+	$scope.clickX = function(tile) {	
+		
+		$scope.clickXHelper();
+
 	    return tile.show_expanded =! tile.show_expanded;	
-	    };    
+	    };   
+
+	
 
 
 	// slider
@@ -215,17 +217,24 @@ angular.module('myApp.work', ['ngRoute'])
 .directive('scrollOnClick', function(){
 	return {
 	    restrict: 'A',
-	    link: function(scope, $elm) {
+	    link: function(scope, $elm, attrs) {
 	      $elm.on('click', function() {
 
 		      	// var scrolltop = 'scrollTop';
-		      	var scrollto = parseInt($(this).siblings(".expanded").offset().top);
-		      	console.log(scrollto);
+		      	// var scrollto = parseInt($(this).siblings(".expanded").offset().top);
+		      	// console.log(scrollto);
 		      	// var scrollObject = {};
 		      	// scrollObject[scrolltop] = scrollto;
 		      	// console.log(scrollObject);
-		      	var scrollObject = {scrollTop: scrollto};
-		        $("body").delay("fast").animate(scrollObject, "slow");
+		      	var scrollObject = {scrollTop: 0};
+		        // $("body").animate(scrollObject, "slow");
+		        if ((scope.$index == 1) || (scope.$index == 1)) {
+		         	$("body").animate({scrollTop: $(this).offset().top + 400}, "slow");
+		     	}
+		     	else {
+		     		$("body").animate({scrollTop: $(this).offset().top}, "slow");
+		     	}
+
 
 	      });
 	    }

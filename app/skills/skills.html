@@ -13,7 +13,7 @@
 
 			<div class="skill" ng-repeat="skill in skills">
 				<div class="bar" ng-style="skillLevelString(skill)" ng-click="toggleDescription(skill)"><p >{{skill.name}}</p></div>
-				<div class="examples" ng-show="skill.view_description" >
+				<div class="examples fadein fadeout" ng-show="skill.view_description" >
 					<div class="example" ng-repeat="example in skill.description" >
 					<p>{{example}}</p>
 					</div>
@@ -43,7 +43,7 @@
 
 			<div class="interest" ng-repeat="interest in interests">
 				<div class="bar" ng-style="skillLevelString(interest)" ng-click="toggleDescription(interest)"><p >{{interest.name}}</p></div>
-				<div class="examples" ng-show="interest.view_description" >
+				<div class="examples fadein fadeout" ng-show="interest.view_description" >
 					<div class="example" ng-repeat="example in interest.description" >
 					<p>{{example}}</p>
 					</div>
