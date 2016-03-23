@@ -9,7 +9,9 @@ angular.module('myApp.skills', ['ngRoute'])
   });
 }])
 
-.controller('SkillsCtrl', ['$scope', function($scope) {
+.controller('SkillsCtrl', ['$scope', 'myService', function($scope, myService) {
+
+	myService.set();
 
 	$scope.skills = [
 		{
@@ -79,7 +81,7 @@ angular.module('myApp.skills', ['ngRoute'])
 		{
 
 			name: "AngularJS",
-			level: 30,
+			level: 25,
 			view_description: false,
 			description: [
 			"this is an example", "this is another example"]
@@ -87,7 +89,7 @@ angular.module('myApp.skills', ['ngRoute'])
 		{
 
 			name: "D3",
-			level: 25,
+			level: 15,
 			view_description: false,
 			description: [
 			"this is an example", "this is another example"]
@@ -115,22 +117,28 @@ angular.module('myApp.skills', ['ngRoute'])
 			name: "Music",
 			level: 95,
 			view_description: false,
-			description: [
-			"this is an example", "this is another example"]
+			description: [{
+				"this is an example": "link",
+				"this is another example": "link2"
+			}]
 		},
 		{
 			name: "Food",
 			level: 90,
 			view_description: false,
-			description: [
-			"this is an example", "this is another example"]
+			description: [{
+				"this is an example": "link",
+				"this is another example": "link2"
+			}]
 		},
 		{
 			name: "Tornados",
 			level: 85,
 			view_description: false,
-			description: [
-			"this is an example", "this is another example"]
+			description: [{
+				"this is an example": "link",
+				"this is another example": "link2"
+			}]
 		}
 		
 	];

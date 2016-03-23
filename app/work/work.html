@@ -20,9 +20,12 @@
 		</div>
 		<div id="{{tile.idee}}" class="col12 expanded fadein fadeout" ng-show="tile.show_expanded" >
 			<div class="exit" ng-click="clickX(tile)">
-				X
+				+
 			</div>
-			<div class="container slider">
+			<div class="pic-to-link" ng-show="!tile.has_slider">
+				<a href="{{tile.img_link}}" target="blank"> <div class="pic" style="background-image: url({{tile.cover}}); background-size: {{tile.cover_size}};background-position:{{tile.cover_pos}};"></div>
+				</div></a>
+			<div class="container slider" ng-show="tile.has_slider">
 			    <div ng-repeat="slide in slides" class="slide slide-animation" style="background-image: url({{slide.image}}); background-size: {{slide.size}};background-position:{{slide.pos}};" ng-hide="!isCurrentSlideIndex($index)">
 			    </div>
 
@@ -40,9 +43,17 @@
 		        </nav>
 			</div>
 			<div class="description">
-				<h2>{{tile.name}}</h2>
-				<h5>{{tile.type}}</h5>
-				<p>{{tile.descrip}}</p>
+				<div class="col10">
+					<h2>{{tile.name}}</h2>
+					<h5>{{tile.type}}</h5>
+					<p class="mar-bottom-small">{{tile.descrip}}</p>
+					<div class="mar-bottom-small" ng-class="{'issues':tile.haslinks}" ng-repeat="dict in tile.issues">
+						<div ng-repeat="(key, value) in dict">
+							<a href="{{value}}" target="blank"><p>{{key}}</p></a>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</div>
 	

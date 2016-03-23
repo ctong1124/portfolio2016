@@ -9,6 +9,8 @@ angular.module('myApp.contact', ['ngRoute'])
   });
 }])
 
-.controller('ContactCtrl', [function() {
+.controller('ContactCtrl', ['$scope', 'myService', function($scope, myService) {
+
+	myService.set();
 
 }]);

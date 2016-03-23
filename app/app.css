@@ -419,11 +419,20 @@ body {
 
 
 #work .tiles .expanded .exit{
-  padding: .4em .75em;
+  /*padding: .4em .75em;*/
   color: #F4F7F5;
   float: right;
-  margin: .5em;
+  margin: .25em .5em;
   cursor: pointer;
+  font-size: 2em;
+  font-family: sans-serif;
+  font-weight: 200;
+
+  -webkit-transform: rotate(45deg);
+  -moz-transform:    rotate(45deg);
+  -ms-transform:     rotate(45deg);
+  -o-transform:      rotate(45deg);
+  transform:         rotate(45deg);
 }
 
 
@@ -564,6 +573,42 @@ body {
   margin: 0;
 }
 
+#work .expanded .description h5 {
+  padding-bottom: 1em;
+}
+
+#work .expanded .pic-to-link .pic {
+  background-repeat: no-repeat;
+  height: 20em;
+  cursor: pointer;
+}
+
+#work .expanded .description .issues div {
+  display: inline;
+}
+
+
+#work .expanded .description .issues a{
+  display: inline;
+  text-decoration: none;
+
+}
+
+#work .expanded .description .issues p{
+  display: inline;
+  vertical-align: top;
+  padding-right: 1em;
+  -webkit-transition:color .25s ease;
+  -moz-transition: color .25s ease;
+  -o-transition: color .25s ease;
+  transition: color .25s ease;
+}
+
+#work .expanded .description .issues p:hover {
+  color: #C2D3CD;
+}
+
+
 
 /*experience*/
 #exp .section-fixed {
@@ -608,6 +653,17 @@ body {
 #exp .exp-header h4,
 #exp .exp-header p  {
   margin: 0;
+}
+#exp .exp-header h4.haslink {
+  cursor: pointer;
+-webkit-transition:color .25s ease;
+  -moz-transition: color .25s ease;
+  -o-transition: color .25s ease;
+  transition: color .25s ease;
+}
+
+#exp .exp-header h4.haslink:hover {
+  color: #C2D3CD;
 }
 
 #exp .exp-description p {
@@ -726,11 +782,15 @@ body {
   background-color: #847E89;
   padding: .5em;
   margin: 1em 0;
+  
+
+}
+#skills .interests .bar{
   cursor: pointer;
 
 }
 
-#skills .bar:hover p{
+#skills .interests .bar:hover p{
   color: #C2D3CD;
 }
 

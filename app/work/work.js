@@ -13,7 +13,7 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 
 
 
-.controller('WorkCtrl', ['$scope', function($scope) {
+.controller('WorkCtrl', ['$scope', 'myService', function($scope, myService) {
 	
     // $scope.hoverActive = false;
   
@@ -26,7 +26,9 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 			cover: "img/spot_iphone.jpg",
 			cover_size:"60em 40em, cover",
 			cover_pos: "80% 50%",
-			descrip: "Lol kill me now",
+			descrip: "Spot is the front-end prototype of a collaborative music playlist web application. It is designed for party-goers who can independently add a song to the playlist on their own mobile devices and downvote and upvote songs on the playlist. This was part of a group project for a Human-Computer Interaction course where the entire process of design, implementation and evaluation was completed. We went through different techniques such as ethnographic study, requirements analysis, scenario-based design, paper prototyping, computer prototyping, and usability analysis and evaluation to develop our user interface.",
+			haslinks: false,
+			has_slider: true,
 			show_title: false,
 			black_overlay: false,
 			show_expanded: false
@@ -39,7 +41,10 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 			cover: "img/record.png",
 			cover_size:"90em 60em, cover",
 			cover_pos: "65% 50%",
-			descrip: "Lol kill me now",
+			descrip: "'A Guide to House Music' is a informational site made for a Web Design and Development course. The content was aggregated from many existing site but the design and developement were all original. ",
+			haslinks: false,
+			has_slider: false,
+			img_link: "http://www.carisatong.com/house",
 			show_title: false,
 			black_overlay: false,
 			show_expanded: false
@@ -54,7 +59,9 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 			// cover_pos: "20% 70%",
 			cover_size:"60em 30em, cover",
 			cover_pos: "72% 70%",
-			descrip: "Lol kill me now",
+			descrip: "Worked at Shutterstock as a graphic design intern on their Marketing Department, designing digital and print media. Worked closely with the Events staff to design informational materials and swag for use in events such as Pixels of Fury and AIGA events. Manipulated existing Shutterstock assets, including photos and vectors, to create content for marketing content.",
+			haslinks: false,
+			has_slider: true,
 			show_title: false,
 			black_overlay: false,
 			show_expanded: false
@@ -70,7 +77,10 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 			cover: "img/ipad_apocalypse.jpg",
 			cover_size:"45em 29em, cover",
 			cover_pos: "40% 100%",
-			descrip: "Maybe i die",
+			descrip: "'Modelling the Zombie Apocalypse' is a site designed for my Mathematics capstone. The site uses D3 to create the graph and visualization for zombie/human population systems during a hypothetical Zombie Apocalypse.",
+			haslinks: false,
+			img_link: "http://carisatong.com/capstone/graph.html",
+			has_slider: false,
 			show_title: false,
 			black_overlay: false,
 			show_expanded: false
@@ -84,7 +94,16 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 			col_size: "col6",
 			cover_size:"66em 44em, cover",
 			cover_pos: "50% 40%",
-			descrip: "Lol kill me now",
+			descrip: "Tastemakers Magazine is Northeastern University's only publication for music criticism and review. As Art Director, I oversaw all visual elements of the organization, as well as designing for print and digital marketing campaigns. We incorporated content from photographers as well as illustrated work. ",
+			issues: [{
+				"Issue 33": "http://tastemakersmag.com/media/issues/2013/issue-33/",
+				"Issue 34": "http://tastemakersmag.com/media/issues/2013/issue-34/" ,
+				"Issue 35": "http://tastemakersmag.com/media/issues/2014/issue-35/", 
+				"Issue 36": "http://tastemakersmag.com/uncategorized/2014/issue-36-2/",
+				"Issue 37": "http://tastemakersmag.com/media/issues/2015/15647/"
+			}],
+			haslinks: true,
+			has_slider: true,
 			show_title: false,
 			black_overlay: false,
 			show_expanded: false
@@ -93,16 +112,8 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 		
 	];
 
-
-
-	$scope.hover = function(tile) {
-	        // Shows/hides the delete button on hover
-	        return tile.show_title = ! tile.show_title;
-	       
-	    };
-
-	 //clicking on tile 
 	$scope.click = function(tile) {
+	// function click(tile) {
 
 		var index = $scope.tiles.indexOf(tile);
 		if ((index%2) == 1) {
@@ -128,6 +139,30 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 			
 	    };
 
+
+
+	
+	$scope.fromExperience = myService.get();
+	if (typeof $scope.fromExperience === 'string' || $scope.fromExperience instanceof String) {
+		angular.forEach($scope.tiles, function(thistile, key) {
+			if(thistile.idee == $scope.fromExperience) {
+				console.log($scope.fromExperience);
+				$scope.click(thistile);
+				// $("body").animate({scrollTop: $(thistile.idee).offset().top}, "slow");
+			}
+		});
+	}
+	
+
+
+	$scope.hover = function(tile) {
+	        // Shows/hides the delete button on hover
+	        return tile.show_title = ! tile.show_title;
+	       
+	    };
+
+	 //clicking on tile 
+	
 	
 	$scope.clickXHelper = function() {
 			angular.forEach($scope.tiles, function(thistile, key) {
@@ -240,6 +275,7 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 	    }
   	}
 })
+
 
 .animation('.slide-animation', function () {
         return {

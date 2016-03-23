@@ -15,4 +15,19 @@ angular.module('myApp', [
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/work'});
 }])
+.factory('myService', function() {
+	var savedData = {}
+	function set(data) {
+	savedData = data;
+	}
+	function get() {
+	return savedData;
+	}
+
+	return {
+	set: set,
+	get: get
+	}
+
+})
 ;

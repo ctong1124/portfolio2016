@@ -9,12 +9,13 @@ angular.module('myApp.experience', ['ngRoute'])
   });
 }])
 
-.controller('ExperienceCtrl', ['$scope', function($scope) {
+.controller('ExperienceCtrl', ['$scope', '$location','myService', function($scope, $location, myService) {
 	$scope.schools = [
 		{
 			name: "Homestead High School",
 			location: "Cupertino, CA",
 			dates: "Class of 2011", 
+			link: false,
 			description: [
 			{
 				"Academic GPA": " 3.8",
@@ -25,6 +26,7 @@ angular.module('myApp.experience', ['ngRoute'])
 			name: "Northeastern University",
 			location: "Boston, MA",
 			dates: "Class of 2016", 
+			link: false,
 			description: [
 			{
 				"Bachelor of Science": " in Mathematics with a minor in Computer Science",
@@ -40,6 +42,7 @@ angular.module('myApp.experience', ['ngRoute'])
 			name: "Digital Analytics Co-op at Boston Globe Media",
 			location: "Boston, MA",
 			dates: "July 2013 - December 2013", 
+			link: false,
 			description: [
 			{
 				"Provided insight and analysis": " of data pertaining to user behavior of the Boston Globe Media websites using Adobe Analytics (formerly Omniture/SiteCataylst)",
@@ -52,9 +55,11 @@ angular.module('myApp.experience', ['ngRoute'])
 			name: "Art Director at Tastemakers Magazine",
 			location: "Northeastern University, Boston, MA",
 			dates: "May 2013 - December 2014", 
+			link: true,
+			idee: "Tastemakers",
 			description: [
 			{
-				"Oversaw all artistic aspects of Tastemakers Magazine,": "Northeastern University’s print and online publication focused on music journalism and criticism",
+				"Oversaw all artistic aspects of Tastemakers Magazine,": " Northeastern University’s print and online publication focused on music journalism and criticism",
 				"Managed a team of designers": " and illustrators who created print magazine elements",
 				"Coordinated with": " writing team and professional printers to meet publishing deadlines", 
 				"Designed editorial spreads": " for magazine and event promo material, print and online"
@@ -75,6 +80,8 @@ angular.module('myApp.experience', ['ngRoute'])
 			name: "Graphic Design Intern at Shutterstock",
 			location: "New York, New York",
 			dates: "January 2015 - April 2015", 
+			link: true,
+			idee: "Shutterstock",
 			description: [
 			{
 				"Created design assets": " for marketing campaigns serving North America, South America, Asia and European markets",
@@ -83,5 +90,16 @@ angular.module('myApp.experience', ['ngRoute'])
 			}]
 		}
 	];
+
+	$scope.clickJob = function(job) {
+	        if (job.link) {
+	        	myService.set(job.idee);
+	        	$location.path('#/work');
+	        }
+	        
+	       
+	    };
+
+	
 
 }]);
