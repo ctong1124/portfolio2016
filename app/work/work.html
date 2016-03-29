@@ -23,20 +23,20 @@
 				+
 			</div>
 			<div class="pic-to-link" ng-show="!tile.has_slider">
-				<a href="{{tile.img_link}}" target="blank"> <div class="pic" style="background-image: url({{tile.cover}}); background-size: {{tile.cover_size}};background-position:{{tile.cover_pos}};"></div>
+				<a href="{{tile.img_link}}" target="blank"> <div class="pic" style="background-image: url({{tile.cover}}); background-size: {{tile.exp_size}};background-position:{{tile.exp_pos}};"></div>
 				</div></a>
 			<div class="container slider" ng-show="tile.has_slider">
-			    <div ng-repeat="slide in slides" class="slide slide-animation" style="background-image: url({{slide.image}}); background-size: {{slide.size}};background-position:{{slide.pos}};" ng-hide="!isCurrentSlideIndex($index)">
+			    <div ng-repeat="slide in tile.slider" class="slide slide-animation" style="background-image: url({{slide.image}}); background-size: {{slide.size}};background-position:{{slide.pos}};" ng-hide="!isCurrentSlideIndex($index)">
 			    </div>
 
-			    <a class="arrow prev" ng-click="nextSlide()"></a>
-   				<a class="arrow next" ng-click="prevSlide()"></a>
+			    <a class="arrow prev" ng-click="nextSlide(tile.slider)"></a>
+   				<a class="arrow next" ng-click="prevSlide(tile.slider)"></a>
 			    <nav class="nav">
 		            <div class="wrapper">
 		                <ul class="dots">
-		                    <li class="dot" ng-repeat="slide in slides">
+		                    <li class="dot" ng-repeat="slide in tile.slider">
 		                        <a  ng-class="{'active':isCurrentSlideIndex($index)}"
-		                          ng-click="setCurrentSlideIndex($index);">{{slide.description}}</a>
+		                          ng-click="setCurrentSlideIndex($index);"></a>
 		                    </li>
 		                </ul>
 		            </div>

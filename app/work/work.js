@@ -23,7 +23,7 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 			idee: "Spot",
 			type: "Web Development, UI",
 			col_size: "col6",
-			cover: "img/spot_iphone.jpg",
+			cover: "img/spot/spot_iphone.jpg",
 			cover_size:"60em 40em, cover",
 			cover_pos: "80% 50%",
 			descrip: "Spot is the front-end prototype of a collaborative music playlist web application. It is designed for party-goers who can independently add a song to the playlist on their own mobile devices and downvote and upvote songs on the playlist. This was part of a group project for a Human-Computer Interaction course where the entire process of design, implementation and evaluation was completed. We went through different techniques such as ethnographic study, requirements analysis, scenario-based design, paper prototyping, computer prototyping, and usability analysis and evaluation to develop our user interface.",
@@ -32,6 +32,52 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 				"Mobile emulator for site": "http://mobiletest.me/apple_iphone_5/2983587"
 			}],
 			has_slider: true,
+			slider: [
+				{
+					image: "img/spot/spot_iphone.jpg",
+					size:"60em 40em, cover",
+					pos: "center",
+					description: "Lol kill me now"
+				},
+				{
+					
+					image: "img/spot/spot_sketches.jpg",
+					size:"54em 36em, cover",
+					pos: "center",
+					
+					
+				},
+				{
+					
+					image: "img/spot/spot_storyboard.jpg",
+					size:"54em 36em, cover",
+					pos: "center",
+					
+					
+				},
+				{
+					image: "img/spot/spot_paper.jpg",
+					size:"54em 36em, cover",
+					pos: "center",
+					
+				},
+				// {
+					
+				// 	image: "img/spot/spot_mockups.jpg",
+				// 	size:"66em 44em, cover",
+				// 	pos: "center",
+				// 	
+					
+				// },
+				{
+					
+					image: "img/spot/spot_screens.jpg",
+					size:"54em 36em, cover",
+					pos: "center",
+					
+					
+				}
+			],
 			show_title: false,
 			black_overlay: false,
 			show_expanded: false
@@ -44,9 +90,12 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 			cover: "img/record.png",
 			cover_size:"90em 60em, cover",
 			cover_pos: "65% 50%",
+			exp_size: "90em 60em, cover",
+			exp_pos: "65% 50%",
 			descrip: "'A Guide to House Music' is a informational site made for a Web Design and Development course. The content was aggregated from many existing site but the design and developement were all original. ",
 			haslinks: false,
 			has_slider: false,
+
 			img_link: "http://www.carisatong.com/house",
 			show_title: false,
 			black_overlay: false,
@@ -57,14 +106,51 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 			idee: "Shutterstock",
 			type: "Graphic Design",
 			col_size: "col6",
-			cover: "img/moo_cover.png",
+			cover: "img/ss/moo_cover.png",
 			// cover_size:"45em 30em, cover",
 			// cover_pos: "20% 70%",
 			cover_size:"60em 30em, cover",
 			cover_pos: "72% 70%",
-			descrip: "Worked at Shutterstock as a graphic design intern on their Marketing Department, designing digital and print media. Worked closely with the Events staff to design informational materials and swag for use in events such as Pixels of Fury and AIGA events. Manipulated existing Shutterstock assets, including photos and vectors, to create content for marketing content.",
+			descrip: "Worked at Shutterstock as a graphic design intern on their Marketing Department, designing digital and print media. Worked closely with the Events staff to design materials and swag for use in events such as Shutterstock's Pixels of Fury, AIGA's Portfolio Night and WWPI's Wedding and Photography Expo. Curated Shutterstock assets, including photos and vectors, for use in marketing campaigns.",
 			haslinks: false,
+			// issues: [{
+			// 	"Pixels of Fury Notebooks": "https://www.instagram.com/p/0dYKFomAW3/",
+			// 	"Pixels of Fury Flipbook": "https://www.instagram.com/p/1TnySIGfo1/",
+			// 	"PN notebook": "https://www.instagram.com/p/29qkOIovRY/"
+			// }],
 			has_slider: true,
+			slider: [
+				{
+					
+					image: "img/ss/moo_cover.png",
+					size:"60em 30em, cover",
+					pos: "72% 70%",
+					
+					
+				},
+				{
+					
+					image: "img/ss/moo_mockup.jpg",
+					size:"60em 40em, cover",
+					pos: "center",
+					
+					
+				},
+				{
+					
+					image: "img/ss/templates1.jpg",
+					size:"60em 40em, cover",
+					pos: "center",
+					
+					
+				},
+				{
+					image: "img/ss/templates2.jpg",
+					size:"60em 40em, cover",
+					pos: "center",
+					
+				}
+			],
 			show_title: false,
 			black_overlay: false,
 			show_expanded: false
@@ -78,8 +164,10 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 			type: "Web Development, UI",
 			col_size: "col6",
 			cover: "img/ipad_apocalypse.jpg",
-			cover_size:"45em 29em, cover",
+			cover_size:"48em 32em, cover",
 			cover_pos: "40% 100%",
+			exp_size: "60em 40em, cover",
+			exp_pos: "center",
 			descrip: "'Modelling the Zombie Apocalypse' is a site designed for my Mathematics capstone. The site uses D3 to create the graph and visualization for zombie/human population systems during a hypothetical Zombie Apocalypse.",
 			haslinks: false,
 			img_link: "http://carisatong.com/capstone/graph.html",
@@ -107,6 +195,76 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 			}],
 			haslinks: true,
 			has_slider: true,
+			slider: [
+				{
+					image: "img/tmm_mockup.jpg",
+					size:"60em 40em, cover",
+					pos: "center",
+					description: "Lol kill me now"
+				},
+				{
+					image: "img/tmm/modernmixtape1.jpg",
+					size:"60em 40em, cover",
+					pos: "center",
+					description: "Lol kill me now"
+				},
+				{
+					
+					image: "img/tmm/modernmixtape2.jpg",
+					size:"60em 40em, cover",
+					pos: "center",
+					
+					
+				},
+				{
+					
+					image: "img/tmm/shoegazing1.jpg",
+					size:"60em 40em, cover",
+					pos: "center",
+					
+					
+				},
+				{
+					
+					image: "img/tmm/shoegazing2.jpg",
+					size:"60em 40em, cover",
+					pos: "center",
+					
+					
+				},
+				{
+					
+					image: "img/tmm/wilco.jpg",
+					size:"60em 40em, cover",
+					pos: "center",
+					
+					
+				},
+				{
+					
+					image: "img/tmm/haerts1.jpg",
+					size:"60em 40em, cover",
+					pos: "center",
+					
+					
+				},
+				{
+					
+					image: "img/tmm/haerts2.jpg",
+					size:"60em 40em, cover",
+					pos: "center",
+					
+					
+				},
+				{
+					
+					image: "img/tmm/haerts3.jpg",
+					size:"60em 40em, cover",
+					pos: "center",
+					
+					
+				}
+			],
 			show_title: false,
 			black_overlay: false,
 			show_expanded: false
@@ -200,7 +358,7 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 			image: "img/record.png",
 			size:"60em 40em, cover",
 			pos: "center",
-			description: "Lol kill me now",
+			
 			
 		},
 		{
@@ -208,7 +366,7 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 			image: "img/moo_cover.png",
 			size:"60em 30em, cover",
 			pos: "center",
-			description: "Lol kill me now",
+			
 			
 		},
 		{
@@ -216,14 +374,14 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 			image: "img/ipad_apocalypse.jpg",
 			size:"60em 40em, cover",
 			pos: "center",
-			description: "Maybe i die",
+			
 		},
 		{
 			
 			image: "img/tmm_mockup.jpg",
 			size:"66em 44em, cover",
 			pos: "center",
-			description: "Lol kill me now",
+			
 			
 		},
 		
@@ -240,12 +398,12 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
         return $scope.currentIndex === index;
     };
 
-    $scope.prevSlide = function () {
-            $scope.currentIndex = ($scope.currentIndex < $scope.slides.length - 1) ? ++$scope.currentIndex : 0;
+    $scope.prevSlide = function (slider) {
+            $scope.currentIndex = ($scope.currentIndex < slider.length - 1) ? ++$scope.currentIndex : 0;
         };
 
-    $scope.nextSlide = function () {
-        $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : $scope.slides.length - 1;
+    $scope.nextSlide = function (slider) {
+        $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : slider.length - 1;
     };
 
 
