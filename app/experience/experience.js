@@ -84,9 +84,9 @@ angular.module('myApp.experience', ['ngRoute'])
 			idee: "Shutterstock",
 			description: [
 			{
-				"Created design assets": " for marketing campaigns serving North America, South America, Asia and European markets",
+				"Created design assets": " and curated Shutterstock assets for marketing campaigns serving North America, South America, Asia and European markets",
 				"Designed promotional material": " for Shutterstock affiliated events such as Pixels of Fury and AIGA Portfolio Night alongside Shutterstock Art Directors and Events staff", 
-				"Made executive presentations" : " slide decks and informational material for internal clients to aid business growth and development"
+				"Made executive presentations" : " slide decks and informational material for internal clients to aid business growth and development",
 			}]
 		}
 	];

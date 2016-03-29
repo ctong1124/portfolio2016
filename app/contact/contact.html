@@ -1,14 +1,17 @@
 <div id="contact">
 
-<div class="section">
+<div class="section" ng-class="{'playing': hoveringHuh}">
 	<div class="section-fixed">
 		<div class="col12">
+			<div ng-mouseenter="hover()"  ng-click="click()" ng-mouseleave="hover()" class="e-mail" id="text-to-copy" data-clipboard-text="ctong1124@gmail.com">
+				<h1 ng-class="{'hover-email': hoveringHuh}" >e-mail me</h1>
+			</div>
 
+			<div id="copied" ng-show="copied">
+                <h5> e-mail address copied to clipboard</h5>
+            </div>
 
-
-			<p>please email me i'm unemployed. contact</p>
-
-	</div>
+		</div>
 	</div>
 </div>
 </div>

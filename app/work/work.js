@@ -27,7 +27,10 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 			cover_size:"60em 40em, cover",
 			cover_pos: "80% 50%",
 			descrip: "Spot is the front-end prototype of a collaborative music playlist web application. It is designed for party-goers who can independently add a song to the playlist on their own mobile devices and downvote and upvote songs on the playlist. This was part of a group project for a Human-Computer Interaction course where the entire process of design, implementation and evaluation was completed. We went through different techniques such as ethnographic study, requirements analysis, scenario-based design, paper prototyping, computer prototyping, and usability analysis and evaluation to develop our user interface.",
-			haslinks: false,
+			haslinks: true,
+			issues: [{
+				"Mobile emulator for site": "http://mobiletest.me/apple_iphone_5/2983587"
+			}],
 			has_slider: true,
 			show_title: false,
 			black_overlay: false,
@@ -279,32 +282,35 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 
 .animation('.slide-animation', function () {
         return {
-            addClass: function (element, className, done) {
-                if (className == 'ng-hide') {
-                	var backgroundpos = element.css("background-position");
-                	var xpos = parseInt(backgroundpos.split("%")[0]);
-                	var xposstring = toString(xpos*4) + " " + element.css("background-position").split(" ")[1];
-                    TweenMax.to(element, 0.5, {backgroundPosition:  xposstring, onComplete: done });                   
-                }
-                else {
-                    done();
-                }
-            },
-            removeClass: function (element, className, done) {
-                if (className == 'ng-hide') {
-                	element.removeClass('ng-hide');
+            // addClass: function (element, className, done) {
+            //     if (className == 'ng-hide') {
+            //     	var backgroundpos = element.css("background-position");
+            //     	console.log(backgroundpos);
+            //     	var xpos = parseInt(backgroundpos.split("%")[0]);
+            //     	console.log(xpos);
+            //     	var xposstring = xpos*4 + " " + element.css("background-position").split(" ")[1];
+            //     	console.log(xposstring);
+            //         TweenMax.to(element, 0.5, {backgroundPosition:  xposstring, onComplete: done });                   
+            //     }
+            //     else {
+            //         done();
+            //     }
+            // },
+            // removeClass: function (element, className, done) {
+            //     if (className == 'ng-hide') {
+            //     	element.removeClass('ng-hide');
 
-                	var backgroundpos = element.css("background-position");
-                	var xpos = parseInt(backgroundpos.split("%")[0]);
-                	var xposstring = toString(xpos*4) + " " + backgroundpos.split(" ")[1];
-                    TweenMax.set(element, { backgroundPosition:  xposstring});
+            //     	var backgroundpos = element.css("background-position");
+            //     	var xpos = parseInt(backgroundpos.split("%")[0]);
+            //     	var xposstring = toString(xpos*4) + " " + backgroundpos.split(" ")[1];
+            //         TweenMax.set(element, { backgroundPosition:  xposstring});
 
 
-                    TweenMax.to(element, 0.5, {backgroundPosition: backgroundpos, onComplete: done });
-                }
-                else {
-                    done();
-                }
-            }
+            //         TweenMax.to(element, 0.5, {backgroundPosition: backgroundpos, onComplete: done });
+            //     }
+            //     else {
+            //         done();
+            //     }
+            // }
         };
     });
