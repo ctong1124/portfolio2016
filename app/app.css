@@ -211,16 +211,16 @@ body {
   background-color: #F4F7F5
 }
 
-.ng-enter
+.page-fadein.ng-enter
 /*,.ng-enter.ng-enter-active,*/
  { 
   animation: page-fadein 0.5s  ease-in; 
   z-index: 8888; 
 }
-.ng-leave
+.page-fadein.ng-leave
 /*,.ng-leave.ng-leave-active */
 {
-  animation: slideOutLeft 0.5s both ease-in; 
+  animation: page-fadeout 0.5s both ease-in; 
   z-index: 9999; 
 }
 
@@ -932,12 +932,12 @@ body {
   
 
 }
-#skills .interests .bar{
+#skills .yes-descrip .bar{
   cursor: pointer;
 
 }
 
-#skills .interests .bar:hover p{
+#skills .yes-descrip .bar:hover p{
   color: #C2D3CD;
 }
 
@@ -945,10 +945,10 @@ body {
   margin: 0;
   color: #F4F7F5;
   padding-left: 1em;
-  -webkit-transition:color .25s ease;
+  /*-webkit-transition:color .25s ease;
   -moz-transition: color .25s ease;
   -o-transition: color .25s ease;
-  transition: color .25s ease;
+  transition: color .25s ease;*/
 }
 
 #skills .examples {
@@ -984,6 +984,32 @@ body {
   background-color: #9FA4A9;
   padding-bottom: 6em;
 }
+
+#skills .interests a{
+  text-decoration: none;
+  
+
+}
+
+#skills .interests.yes-descrip p {
+  -webkit-transition:color linear .3s;
+  -moz-transition:color linear .3s;
+  -o-transition:color linear .3s;
+  transition:color linear .3s;
+}
+
+#skills .interests.yes-descrip p:hover{
+  color: #C2D3CD;
+
+}
+
+
+
+#skills .no-descrip .bar {
+  cursor: none;
+}
+
+
 
 
 /*CONTACT*/

@@ -5,7 +5,8 @@ angular.module('myApp.skills', ['ngRoute'])
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/skills', {
     templateUrl: 'skills/skills.html',
-    controller: 'SkillsCtrl'
+    controller: 'SkillsCtrl',
+    animation: 'page-fadein'
   });
 }])
 
@@ -100,7 +101,12 @@ angular.module('myApp.skills', ['ngRoute'])
 	];
 
 	$scope.toggleDescription  = function(skill) {
-	        return skill.view_description = !skill.view_description;
+			if (skill.has_description) {
+	      	  return skill.view_description = !skill.view_description;
+	      	}
+	      	else {
+	      		return false;
+	      	}
 	       
 	    };
 
@@ -119,15 +125,17 @@ angular.module('myApp.skills', ['ngRoute'])
 			name: "Music",
 			level: 95,
 			view_description: false,
+			has_description: true,
 			description: [{
-				"this is an example": "link",
-				"this is another example": "link2"
+				"Perhaps my listening habits interest you": "http://lastfm.com/ctong1124",
+				"This is where I keep my playlists": "https://play.spotify.com/user/12121749949"
 			}]
 		},
 		{
 			name: "Food",
 			level: 90,
 			view_description: false,
+			has_description: false,
 			description: [{
 				"this is an example": "link",
 				"this is another example": "link2"
@@ -137,6 +145,7 @@ angular.module('myApp.skills', ['ngRoute'])
 			name: "Tornados",
 			level: 85,
 			view_description: false,
+			has_description: false,
 			description: [{
 				"this is an example": "link",
 				"this is another example": "link2"

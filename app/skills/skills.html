@@ -50,12 +50,12 @@
 				<div class="adv">extremely interested</div>
 			</div>
 
-			<div class="interest" ng-repeat="interest in interests">
+			<div class="interest" ng-class="{'yes-descrip': interest.has_description}" ng-repeat="interest in interests">
 				<div class="bar" ng-style="skillLevelString(interest)" ng-click="toggleDescription(interest)"><p >{{interest.name}}</p></div>
 				<div class="examples fadein fadeout" ng-show="interest.view_description" >
 					<div class="example" ng-repeat="dict in interest.description" >
 						<div ng-repeat="(key, value) in dict">
-							<p>{{key}}</p>
+							<a href="{{value}}" target="blank"><p>{{key}}</p></a>
 						</div>
 					</div>
 				</div>

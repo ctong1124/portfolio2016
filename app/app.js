@@ -30,4 +30,9 @@ config(['$routeProvider', function($routeProvider) {
 	}
 
 })
+.controller('ctrl', function($scope, $rootScope){
+	  $rootScope.$on('$routeChangeStart', function(event, currRoute, prevRoute){
+		$rootScope.animation = currRoute.animation;
+	  });
+	})
 ;

@@ -7,7 +7,8 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/work', {
     templateUrl: 'work/work.html',
-    controller: 'WorkCtrl'
+    controller: 'WorkCtrl',
+    animation: 'page-fadein'
   });
 }])
 
