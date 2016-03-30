@@ -14,6 +14,8 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 
 
 .controller('WorkCtrl', ['$scope', 'myService', function($scope, myService) {
+
+	$scope.pageClass = 'page-work';
 	
     // $scope.hoverActive = false;
   
@@ -276,6 +278,8 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 	$scope.click = function(tile) {
 	// function click(tile) {
 
+		$scope.currentIndex = 0;
+
 		var index = $scope.tiles.indexOf(tile);
 		if ((index%2) == 1) {
 			var newcolsizeindex = index-1;
@@ -331,6 +335,7 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 			thistile.black_overlay =!thistile.black_overlay;
 			//change col size back down
 			thistile.col_size = 'col6';
+
 		});	
 	} 
 
@@ -405,6 +410,19 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
     $scope.nextSlide = function (slider) {
         $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : slider.length - 1;
     };
+
+    $scope.keypress = function($event, slider) {
+    	console.log("keypress");
+    	var keyCode = $event.which || $event.keyCode;
+    	if (keyCode === 37) {
+    		console.log("leftarrow");
+    		$scope.prevSlide(slider);
+    	}
+    	else if (keyCode === 39) {
+    		console.log("rightarrow");
+    		$scope.nextSlide(slider);    		
+    	}
+    }
 
 
 

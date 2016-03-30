@@ -11,6 +11,8 @@ angular.module('myApp.skills', ['ngRoute'])
 
 .controller('SkillsCtrl', ['$scope', 'myService', function($scope, myService) {
 
+	$scope.pageClass = 'page-skills';
+
 	myService.set();
 
 	$scope.skills = [

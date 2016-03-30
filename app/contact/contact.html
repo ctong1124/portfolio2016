@@ -1,6 +1,18 @@
 <div id="contact">
 
-<div class="section" ng-class="{'playing': hoveringHuh}">
+<!-- <div class="section in">
+	<a href="https://www.linkedin.com/in/carisatong" target="_blank">
+		<img src="img/linkedinicon.png">
+	</a>
+</div> -->
+<div class="section section-email" ng-class="{'playing': hoveringHuh}">
+	<div class="section-fixed">
+		<div class="in">
+			<a href="https://www.linkedin.com/in/carisatong" target="_blank">
+				<img src="img/linkedinicon.png">
+			</a>
+		</div>
+	</div>
 	<div class="section-fixed">
 		<div class="col12">
 			<div ng-mouseenter="hover()"  ng-click="click()" ng-mouseleave="hover()" class="e-mail" id="text-to-copy" data-clipboard-text="ctong1124@gmail.com">
@@ -8,7 +20,8 @@
 			</div>
 
 			<div id="copied" ng-show="copied">
-                <h5> e-mail address copied to clipboard</h5>
+                <h5 class="non-mobile"> e-mail address copied to clipboard</h5>
+                <h5 class="mobile">ctong1124@gmail.com</h5>
             </div>
 
 		</div>

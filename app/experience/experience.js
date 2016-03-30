@@ -10,6 +10,9 @@ angular.module('myApp.experience', ['ngRoute'])
 }])
 
 .controller('ExperienceCtrl', ['$scope', '$location','myService', function($scope, $location, myService) {
+
+	$scope.pageClass = 'page-exp';
+
 	$scope.schools = [
 		{
 			name: "Homestead High School",
@@ -88,13 +91,31 @@ angular.module('myApp.experience', ['ngRoute'])
 				"Designed promotional material": " for Shutterstock affiliated events such as Pixels of Fury and AIGA Portfolio Night alongside Shutterstock Art Directors and Events staff", 
 				"Made executive presentations" : " slide decks and informational material for internal clients to aid business growth and development",
 			}]
+		},
+		{
+			name: "Your Project?",
+			// location: "???",
+			// dates: "???", 
+			link: true,
+			idee: "contact",
+			description: [
+			{
+				"I'm a recent graduate looking for a entry-level position.": "",
+				"": "If you are even slightly impressed by my work, please get in contact with me!" 
+			}]
 		}
 	];
 
 	$scope.clickJob = function(job) {
 	        if (job.link) {
-	        	myService.set(job.idee);
-	        	$location.path('#/work');
+	        	console.log(job.idee == "contact");
+	        	if (job.idee == "contact") {
+	        		$location.path("/contact");
+	        	}
+	        	else {
+		        	myService.set(job.idee);
+		        	$location.path('#/work');
+		        }
 	        }
 	        
 	       

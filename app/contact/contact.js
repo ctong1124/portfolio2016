@@ -11,6 +11,8 @@ angular.module('myApp.contact', ['ngRoute'])
 
 .controller('ContactCtrl', ['$scope', 'myService', function($scope, myService) {
 
+	$scope.pageClass = 'page-contact';
+
 	myService.set();
 
 	$scope.hoveringHuh = false;
