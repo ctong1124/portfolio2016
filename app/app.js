@@ -5,7 +5,6 @@ angular.module('myApp', [
 
   'ngRoute',
   'ngAnimate',
-  // 'ngTouch',
   'myApp.work',
   'myApp.experience',
   'myApp.skills',

@@ -14,11 +14,48 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 
 
 
-.controller('WorkCtrl', ['$scope', 'myService', function($scope, myService) {
+.controller('WorkCtrl', ['$scope', '$window', 'myService', function($scope, $window ,myService) {
 
 	$scope.pageClass = 'page-work';
+
+	//window width
+	$scope.screenWidth = $window.innerWidth;
 	
-    // $scope.hoverActive = false;
+   	console.log($scope.screenWidth);
+
+   	$scope.picstyles = function(tile) {
+   		if ($scope.screenWidth < 550) {
+   			return {
+   				"background-size" : tile.mob_size,
+   				"background-position" : tile.mob_pos
+   			}
+   		}
+   		else {
+   			return {
+   				"background-size" : tile.size,
+   				"background-position" : tile.pos
+   			}
+   		}
+   		}
+   	
+
+
+   	// var w = angular.element($window);
+   	// $scope.$watch(
+   	//   function () {
+   	//     return $window.innerWidth;
+   	//   },
+   	//   function (value) {
+   	//     $scope.windowWidth = value;
+   	//     console.log($scope.windowWidth);
+   	//   },
+   	//   true
+   	// );
+
+   	// w.bind('resize', function(){
+   	//   $scope.$apply();
+   	// });
+
   
 	$scope.tiles = [
 		{
@@ -36,17 +73,20 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 			}],
 			has_slider: true,
 			slider: [
-				{
-					image: "img/spot/spot_iphone.jpg",
-					size:"60em 40em, cover",
-					pos: "center",
-					description: "Lol kill me now"
-				},
+				// {
+				// 	image: "img/spot/spot_iphone.jpg",
+				// 	size:"60em 40em, cover",
+				// 	pos: "center",
+				// 	mob_size: "30em 20em, cover",
+				// 	mob_pos: "right center"
+				// },
 				{
 					
 					image: "img/spot/spot_sketches.jpg",
 					size:"54em 36em, cover",
 					pos: "center",
+					mob_size: "30em 20em, cover",
+					mob_pos: "center"
 					
 					
 				},
@@ -55,6 +95,8 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 					image: "img/spot/spot_storyboard.jpg",
 					size:"54em 36em, cover",
 					pos: "center",
+					mob_size: "30em 20em, cover",
+					mob_pos: "center"
 					
 					
 				},
@@ -62,6 +104,8 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 					image: "img/spot/spot_paper.jpg",
 					size:"54em 36em, cover",
 					pos: "center",
+					mob_size: "30em 20em, cover",
+					mob_pos: "center"
 					
 				},
 				// {
@@ -77,8 +121,9 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 					image: "img/spot/spot_screens.jpg",
 					size:"54em 36em, cover",
 					pos: "center",
-					
-					
+					mob_size: "30em 20em, cover",
+					mob_pos: "center"
+						
 				}
 			],
 			show_title: false,
@@ -128,6 +173,8 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 					image: "img/ss/moo_cover.png",
 					size:"60em 30em, cover",
 					pos: "72% 70%",
+					mob_size: "20em 10em, cover",
+					mob_pos: "center"
 					
 					
 				},
@@ -136,6 +183,8 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 					image: "img/ss/moo_mockup.jpg",
 					size:"60em 40em, cover",
 					pos: "center",
+					mob_size: "30em 20em, cover",
+					mob_pos: "center"
 					
 					
 				},
@@ -144,6 +193,8 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 					image: "img/ss/templates1.jpg",
 					size:"60em 40em, cover",
 					pos: "center",
+					mob_size: "30em 20em, cover",
+					mob_pos: "center"
 					
 					
 				},
@@ -151,6 +202,8 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 					image: "img/ss/templates2.jpg",
 					size:"60em 40em, cover",
 					pos: "center",
+					mob_size: "30em 20em, cover",
+					mob_pos: "center"
 					
 				}
 			],
@@ -203,19 +256,23 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 					image: "img/tmm_mockup.jpg",
 					size:"60em 40em, cover",
 					pos: "center",
-					description: "Lol kill me now"
+					mob_size: "30em 20em, cover",
+					mob_pos: "center"					
 				},
 				{
 					image: "img/tmm/modernmixtape1.jpg",
 					size:"60em 40em, cover",
 					pos: "center",
-					description: "Lol kill me now"
+					mob_size: "30em 20em, cover",
+					mob_pos: "center"
 				},
 				{
 					
 					image: "img/tmm/modernmixtape2.jpg",
 					size:"60em 40em, cover",
 					pos: "center",
+					mob_size: "30em 20em, cover",
+					mob_pos: "center"
 					
 					
 				},
@@ -224,6 +281,8 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 					image: "img/tmm/shoegazing1.jpg",
 					size:"60em 40em, cover",
 					pos: "center",
+					mob_size: "30em 20em, cover",
+					mob_pos: "center"
 					
 					
 				},
@@ -232,6 +291,8 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 					image: "img/tmm/shoegazing2.jpg",
 					size:"60em 40em, cover",
 					pos: "center",
+					mob_size: "30em 20em, cover",
+					mob_pos: "center"
 					
 					
 				},
@@ -240,6 +301,8 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 					image: "img/tmm/wilco.jpg",
 					size:"60em 40em, cover",
 					pos: "center",
+					mob_size: "30em 20em, cover",
+					mob_pos: "center"
 					
 					
 				},
@@ -248,6 +311,8 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 					image: "img/tmm/haerts1.jpg",
 					size:"60em 40em, cover",
 					pos: "center",
+					mob_size: "30em 20em, cover",
+					mob_pos: "center"
 					
 					
 				},
@@ -256,6 +321,8 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 					image: "img/tmm/haerts2.jpg",
 					size:"60em 40em, cover",
 					pos: "center",
+					mob_size: "30em 20em, cover",
+					mob_pos: "center"
 					
 					
 				},
@@ -264,6 +331,8 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 					image: "img/tmm/haerts3.jpg",
 					size:"60em 40em, cover",
 					pos: "center",
+					mob_size: "30em 20em, cover",
+					mob_pos: "center"
 					
 					
 				}
@@ -441,14 +510,47 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 		      	// var scrollObject = {};
 		      	// scrollObject[scrolltop] = scrollto;
 		      	// console.log(scrollObject);
-		      	var scrollObject = {scrollTop: 0};
+		      	// var scrollObject = {scrollTop: 0};
 		        // $("body").animate(scrollObject, "slow");
-		        if ((scope.$index == 1) || (scope.$index == 1)) {
-		         	$("body").animate({scrollTop: $(this).offset().top + 400}, "slow");
-		     	}
-		     	else {
-		     		$("body").animate({scrollTop: $(this).offset().top}, "slow");
-		     	}
+
+		        var openindex = 100;
+		        angular.forEach(scope.tiles, function(thistile, key) {
+		        	if(thistile.show_expanded) {
+		        		return openindex = key;
+		        	}
+		        });
+
+		        var clickedindex = scope.$index;
+
+		       
+
+		        if (clickedindex > openindex) {
+		        	if ((openindex == 0) || (((openindex % 2) == 1) && ((clickedindex % 2) == 0))) {
+		        		$("body").animate({scrollTop: $(this).offset().top - 550}, "slow");
+		        	} 
+		        	else if (openindex == 2) {
+		        		$("body").animate({scrollTop: $(this).offset().top - 420}, "slow");
+		        	}
+		        	else {
+		        		$("body").animate({scrollTop: $(this).offset().top -200}, "slow");
+		        	}
+
+
+		        }
+		        else {
+		        	if((clickedindex == 1) || (clickedindex == 3)) {
+		        		$("body").animate({scrollTop: $(this).offset().top + 400}, "slow");
+		        	}
+		        	else {
+		        		$("body").animate({scrollTop: $(this).offset().top}, "slow");
+		        	}
+		        }
+		        
+
+		        // $("body").animate({scrollTop: $(this).offset().top - 550}, "slow");
+
+		        
+		      
 
 
 	      });

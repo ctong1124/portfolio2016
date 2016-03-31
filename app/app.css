@@ -380,7 +380,7 @@ body {
 
 #work .banner h1, 
 #work .banner h6{
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   margin: 0;
 }
 
@@ -1388,8 +1388,19 @@ html, body {
   padding-right: 2em;
 }
 
+.header .header-left h4 {
+  margin-right: 50%;
+}
+
 #work .slider .arrow {
   margin-top: -20em;
+}
+
+#work .slider .slide {
+  height: 20em;
+}
+#work .slider .nav {
+  height: 0;
 }
 
 #work .slider .wrapper {

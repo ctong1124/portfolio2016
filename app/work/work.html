@@ -5,7 +5,7 @@
 		<div class="col12">
 			<h6>This is the portfolio of</h6>
 			<h1>CARISA TONG</h1>
-			<p> Look around and <a href="#/contact">get in touch.</a> This looks like poop.</p>
+			<p> Look around and <a href="#/contact">get in touch.</a></p>
 		</div>
 	</div>
 </div>
@@ -27,10 +27,12 @@
 			<div class="pic-to-link" ng-show="!tile.has_slider">
 				<a href="{{tile.img_link}}" target="blank"> <div class="pic" style="background-image: url({{tile.cover}}); background-size: {{tile.exp_size}};background-position:{{tile.exp_pos}};"></div>
 				</div></a>
-			<div class="container slider" ng-show="tile.has_slider" ng-keypress="keyup($event, tile.slider)">
-			    <div ng-repeat="slide in tile.slider" class="slide slide-animation" style="background-image: url({{slide.image}}); background-size: {{slide.size}};background-position:{{slide.pos}};" ng-hide="!isCurrentSlideIndex($index)">
+			<div class="container slider" ng-show="tile.has_slider" ng-keypress="keyup($event, tile.slider)" >
+			    <div ng-repeat="slide in tile.slider" class="slide slide-animation" style="background-image: url({{slide.image}});" ng-style="picstyles(slide)" ng-hide="!isCurrentSlideIndex($index)">
 			    </div>
 
+			    <!-- ng-bind="windowWidth" -->
+<!-- background-size: {{slide.size}};background-position:{{slide.pos}};" -->
 			    <a class="arrow prev" ng-click="nextSlide(tile.slider)" ></a>
    				<a class="arrow next" ng-click="prevSlide(tile.slider)"></a>
 			    <nav class="nav">
