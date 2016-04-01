@@ -557,10 +557,9 @@ body {
 
 
 #work .tiles .expanded .exit{
-  /*padding: .4em .75em;*/
   color: #F4F7F5;
   float: right;
-  margin: .25em .5em;
+  margin: .5em .75em;
   cursor: pointer;
   font-size: 2em;
   font-family: sans-serif;
@@ -579,7 +578,7 @@ body {
 
 #work .slider .slide{
   height: 30em;
-  /*border: .5em solid #F4F7F5;*/
+  border: 1em solid #08090A;
   background-repeat: no-repeat;
   background-color: #08090A;
 }
@@ -760,6 +759,7 @@ body {
 /*experience*/
 #exp .section-fixed {
   width:65%;
+  padding-left: 5em;
 }
 
 #exp .exp-description {
@@ -775,8 +775,51 @@ body {
   color: #F4F7F5;
 }
 
+#exp .skipto {
+  padding: 0;
+  display: block;
+}
+
+#exp .fixed-skip {
+  position: fixed;
+  top: 16em;
+  left: 3em;
+}
+
+#exp .fixed-skip p{
+  text-transform: uppercase;
+  font-size: .75em;
+
+}
+
+#exp p.skipto {
+  cursor:pointer;
+
+
+}
+
+
+#exp .s-exp,
+#exp .s-skills,
+#exp .s-edu {
+  cursor: pointer;
+  color: #08090A;
+  padding-left: 1em;
+  -webkit-transition:color .25s ease;
+  -moz-transition: color .25s ease;
+  -o-transition: color .25s ease;
+  transition: color .25s ease;
+}
+
+#exp .s-exp:hover,
+#exp .s-skills:hover
+#exp .s-edu:hover {
+  color: #F4F7F5;
+}
+
 #exp .education {
   background-color: #847E89;
+
 }
 
 #exp .jobs {
@@ -802,20 +845,35 @@ body {
   margin: 0;
 }
 #exp .exp-header h4.haslink {
+  color: #C2D3CD;
   cursor: pointer;
--webkit-transition:color .25s ease;
+  -webkit-transition:color .25s ease;
   -moz-transition: color .25s ease;
   -o-transition: color .25s ease;
   transition: color .25s ease;
 }
 
 #exp .exp-header h4.haslink:hover {
-  color: #C2D3CD;
+  color: #847E89;
 }
 
 #exp .exp-description p {
   margin: .75em 0;
   line-height: 1.5em;
+}
+
+#exp .exp-description a {
+  text-decoration: none;
+  color: #C2D3CD;
+  -webkit-transition:color .25s ease;
+  -moz-transition: color .25s ease;
+  -o-transition: color .25s ease;
+  transition: color .25s ease;
+}
+
+#exp .exp-description a:hover {
+  color: #847E89;
+
 }
 
 #exp  .circle { 
@@ -871,7 +929,7 @@ body {
 }
 
 #skills .skills h3 {
-  margin: 4em 0 2em 0;
+  margin: 2em 0 2em 0;
 }
 
 #skills .interests h3 {
@@ -879,7 +937,8 @@ body {
 }
 
 #skills .section-fixed {
-  width: 60%;
+  width: 65%;
+  padding-left: 5em ;
 }
 
 #skills .xaxis {
@@ -1393,7 +1452,7 @@ html, body {
 }
 
 #work .slider .arrow {
-  margin-top: -20em;
+  margin-top: -40%;
 }
 
 #work .slider .slide {

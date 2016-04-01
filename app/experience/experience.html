@@ -1,6 +1,13 @@
 <div id="exp">
+	<div class="fixed-skip">
+		 <p class="skipto">Skip to</p>
+		 <p class="s-edu" to-edu>Education</p>
+		 <p class="s-exp" to-exp>Experience</p>
+		 <p class="s-skills" to-skills>Skills</p>
+	</div>
 	<div class="section education">
 		<div class="section-fixed">
+
 			<h3>Education</h3>
 
 			<div class="school" ng-repeat="school in schools">
@@ -38,8 +45,82 @@
 					<div ng-repeat="(key, value) in dict">
 						<p><span style="font-weight: 700;">{{key}}</span>{{value}}</p>
 					</div>
+					<p ng-show="yourJob(job)">If you are even slightly impressed by my work, <a href="#/contact">please get in contact with me!</a></p>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+<div id="skills">
+<div class="section skills">
+	<div class="section-fixed">
+		<div class="col12">
+
+			<h3> Skills</h3> 
+
+			<div class="xaxis">
+				<div class="beg">beginner</div>
+				<div class="int">intermediate</div>
+				<div class="adv">advanced</div>
+			</div>
+
+			<div class="skill" ng-repeat="skill in skills">
+				<div class="bar" ng-style="skillLevelString(skill)" ><p >{{skill.name}}</p></div>
+				<div class="examples fadein fadeout" ng-show="skill.view_description" >
+					<div class="example" ng-repeat="example in skill.description" >
+					<p>{{example}}</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- <div class="skill" ng-repeat="skill in skills">
+				<div  slide-toggle="#skill{{$index}}" class="bar" ng-style="skillLevelString(skill)"><p >{{skill.name}}</p></div>
+				<div class="examples slideable" id="skill{{$index}}" >
+					<div class="example" ng-repeat="example in skill.description" >
+					<p>{{example}}</p>
+					</div>
+				</div>
+			</div> -->
+
+			<div class="xaxis-bot">
+				<div class="beg">beginner</div>
+				<div class="int">intermediate</div>
+				<div class="adv">advanced</div>
+			</div>
+
+	</div>
+	</div>
+</div>
+
+<!-- <div class="section interests">
+	<div class="section-fixed">
+		<div class="col12">
+
+			<h3>Interests</h3> 
+			<div class="xaxis">
+				<div class="beg">interested</div>
+				<div class="int">very interested</div>
+				<div class="adv">extremely interested</div>
+			</div>
+
+			<div class="interest" ng-class="{'yes-descrip': interest.has_description}" ng-repeat="interest in interests">
+				<div class="bar" ng-style="skillLevelString(interest)" ng-click="toggleDescription(interest)"><p >{{interest.name}}</p></div>
+				<div class="examples fadein fadeout" ng-show="interest.view_description" >
+					<div class="example" ng-repeat="dict in interest.description" >
+						<div ng-repeat="(key, value) in dict">
+							<a href="{{value}}" target="blank"><p>{{key}}</p></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="xaxis-bot">
+				<div class="beg">interested</div>
+				<div class="int">very interested</div>
+				<div class="adv">extremely interested</div>
+			</div>
+</div>
+</div>
+</div> -->
+</div>
+

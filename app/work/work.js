@@ -23,6 +23,7 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 	
    	console.log($scope.screenWidth);
 
+   	// resize pictures in slider for mobile
    	$scope.picstyles = function(tile) {
    		if ($scope.screenWidth < 550) {
    			return {
@@ -56,7 +57,7 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
    	//   $scope.$apply();
    	// });
 
-  
+  	// tile content 
 	$scope.tiles = [
 		{
 			name: "Spot",
@@ -66,7 +67,7 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 			cover: "img/spot/spot_iphone.jpg",
 			cover_size:"60em 40em, cover",
 			cover_pos: "80% 50%",
-			descrip: "Spot is the front-end prototype of a collaborative music playlist web application. It is designed for party-goers who can independently add a song to the playlist on their own mobile devices and downvote and upvote songs on the playlist. This was part of a group project for a Human-Computer Interaction course where the entire process of design, implementation and evaluation was completed. We went through different techniques such as ethnographic study, requirements analysis, scenario-based design, paper prototyping, computer prototyping, and usability analysis and evaluation to develop our user interface.",
+			descrip: "Spot is the front-end prototype of a collaborative music playlist web application. It is designed for party-goers who can independently add a song to the playlist on their own mobile devices and downvote and upvote songs on the playlist. Spot was a group project for a Human-Computer Interaction course where the entire process of design, implementation and evaluation of the product was completed. We went through different techniques such as ethnographic study, requirements analysis, scenario-based design, paper prototyping, computer prototyping, usability analysis and evaluation to develop our user interface.",
 			haslinks: true,
 			issues: [{
 				"Mobile emulator for site": "http://mobiletest.me/apple_iphone_5/2983587"
@@ -80,6 +81,16 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 				// 	mob_size: "30em 20em, cover",
 				// 	mob_pos: "right center"
 				// },
+
+				{
+					
+					image: "img/spot/spot_screens.jpg",
+					size:"54em 36em, cover",
+					pos: "center",
+					mob_size: "30em 20em, cover",
+					mob_pos: "center"
+						
+				},
 				{
 					
 					image: "img/spot/spot_sketches.jpg",
@@ -107,24 +118,8 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 					mob_size: "30em 20em, cover",
 					mob_pos: "center"
 					
-				},
-				// {
-					
-				// 	image: "img/spot/spot_mockups.jpg",
-				// 	size:"66em 44em, cover",
-				// 	pos: "center",
-				// 	
-					
-				// },
-				{
-					
-					image: "img/spot/spot_screens.jpg",
-					size:"54em 36em, cover",
-					pos: "center",
-					mob_size: "30em 20em, cover",
-					mob_pos: "center"
-						
 				}
+				
 			],
 			show_title: false,
 			black_overlay: false,
@@ -140,8 +135,11 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 			cover_pos: "65% 50%",
 			exp_size: "90em 60em, cover",
 			exp_pos: "65% 50%",
-			descrip: "'A Guide to House Music' is a informational site made for a Web Design and Development course. The content was aggregated from many existing site but the design and developement were all original. ",
-			haslinks: false,
+			descrip: "\"A Guide to House Music\" is a informational site made for a Web Design and Development course. The content was aggregated from many existing site but the design and development was original. ",
+			haslinks: true,
+			issues: [{
+				"Link to project": "http://www.carisatong.com/house"
+			}],
 			has_slider: false,
 
 			img_link: "http://www.carisatong.com/house",
@@ -155,11 +153,9 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 			type: "Graphic Design",
 			col_size: "col6",
 			cover: "img/ss/moo_cover.png",
-			// cover_size:"45em 30em, cover",
-			// cover_pos: "20% 70%",
 			cover_size:"60em 30em, cover",
 			cover_pos: "72% 70%",
-			descrip: "Worked at Shutterstock as a graphic design intern on their Marketing Department, designing digital and print media. Worked closely with the Events staff to design materials and swag for use in events such as Shutterstock's Pixels of Fury, AIGA's Portfolio Night and WWPI's Wedding and Photography Expo. Curated Shutterstock assets, including photos and vectors, for use in marketing campaigns.",
+			descrip: "I worked at Shutterstock as a graphic design co-op in their Marketing Department, designing digital and print media. I worked closely with the Events staff to design materials and collateral for use in events such as Shutterstock's Pixels of Fury, AIGA's Portfolio Night and WWPI's Wedding and Photography Expo. I spent a lot of time curating Shutterstock assets, including photos and vectors, for use in marketing campaigns.",
 			haslinks: false,
 			// issues: [{
 			// 	"Pixels of Fury Notebooks": "https://www.instagram.com/p/0dYKFomAW3/",
@@ -171,8 +167,8 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 				{
 					
 					image: "img/ss/moo_cover.png",
-					size:"60em 30em, cover",
-					pos: "72% 70%",
+					size:"80em 40em, cover",
+					pos: "center",
 					mob_size: "20em 10em, cover",
 					mob_pos: "center"
 					
@@ -224,8 +220,11 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 			cover_pos: "40% 100%",
 			exp_size: "60em 40em, cover",
 			exp_pos: "center",
-			descrip: "'Modelling the Zombie Apocalypse' is a site designed for my Mathematics capstone. The site uses D3 to create the graph and visualization for zombie/human population systems during a hypothetical Zombie Apocalypse.",
-			haslinks: false,
+			descrip: "\"Modelling the Zombie Apocalypse\" is a site designed for my Mathematics capstone. The site uses D3 to create the graph and visualization for zombie/human population systems during a hypothetical Zombie Apocalypse.",
+			haslinks: true,
+			issues: [{
+				"Link to project": "http://carisatong.com/capstone/graph.html"
+			}],
 			img_link: "http://carisatong.com/capstone/graph.html",
 			has_slider: false,
 			show_title: false,
@@ -241,7 +240,7 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 			col_size: "col6",
 			cover_size:"66em 44em, cover",
 			cover_pos: "50% 40%",
-			descrip: "Tastemakers Magazine is Northeastern University's only publication for music criticism and review. As Art Director, I oversaw all visual elements of the organization, as well as designing for print and digital marketing campaigns. We incorporated content from photographers as well as illustrated work. ",
+			descrip: "Tastemakers Magazine is Northeastern University's only publication for music criticism and review. As Art Director, I oversaw all visual elements of the organization, as well as designed for print and digital marketing campaigns. The design of the magazine incorporated content from photographers as well as illustrated work.",
 			issues: [{
 				"Issue 33": "http://tastemakersmag.com/media/issues/2013/issue-33/",
 				"Issue 34": "http://tastemakersmag.com/media/issues/2013/issue-34/" ,
@@ -345,11 +344,12 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 		
 	];
 
+	// click on tile and expand for more information
 	$scope.click = function(tile) {
-	// function click(tile) {
 
 		$scope.currentIndex = 0;
 
+		// fill up missing space from tile expansion and black out other tiles
 		var index = $scope.tiles.indexOf(tile);
 		if ((index%2) == 1) {
 			var newcolsizeindex = index-1;
@@ -376,36 +376,35 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 
 
 
-	
+	//if sent to work page from experience page, then have that page expanded
 	$scope.fromExperience = myService.get();
 	if (typeof $scope.fromExperience === 'string' || $scope.fromExperience instanceof String) {
 		angular.forEach($scope.tiles, function(thistile, key) {
 			if(thistile.idee == $scope.fromExperience) {
 				console.log($scope.fromExperience);
 				$scope.click(thistile);
-				// $("body").animate({scrollTop: $(thistile.idee).offset().top}, "slow");
+				// $("body").animate({scrollTop: $("#Tastemakers").offset().top}, "slow");
+				// $('body, html, #Tastemakers').scrollTop(0);
+				// $("#Tastemakers").animate({ scrollTop: 0 }, "fast");
 			}
 		});
 	}
 	
 
-
+	//hover on tile function
 	$scope.hover = function(tile) {
-	        // Shows/hides the delete button on hover
 	        return tile.show_title = ! tile.show_title;
 	       
 	    };
 
-	 //clicking on tile 
 	
 	
 	$scope.clickXHelper = function() {
-			angular.forEach($scope.tiles, function(thistile, key) {
+		angular.forEach($scope.tiles, function(thistile, key) {
 			//black out other tiles
 			thistile.black_overlay =!thistile.black_overlay;
 			//change col size back down
 			thistile.col_size = 'col6';
-
 		});	
 	} 
 
@@ -419,50 +418,7 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 
 	
 
-
-	// slider
-    $scope.slides = [
-		{
-			image: "img/spot_iphone.jpg",
-			size:"60em 40em, cover",
-			pos: "center",
-			description: "Lol kill me now"
-		},
-		{
-			
-			image: "img/record.png",
-			size:"60em 40em, cover",
-			pos: "center",
-			
-			
-		},
-		{
-			
-			image: "img/moo_cover.png",
-			size:"60em 30em, cover",
-			pos: "center",
-			
-			
-		},
-		{
-			
-			image: "img/ipad_apocalypse.jpg",
-			size:"60em 40em, cover",
-			pos: "center",
-			
-		},
-		{
-			
-			image: "img/tmm_mockup.jpg",
-			size:"66em 44em, cover",
-			pos: "center",
-			
-			
-		},
-		
-		
-	];
-
+	// slider arrow functionality
 	$scope.currentIndex = 0;
 
     $scope.setCurrentSlideIndex = function (index) {
@@ -498,20 +454,15 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 
 }])
 
-.directive('scrollOnClick', function(){
+.directive('scrollOnClick', ['$window', function($window) {
 	return {
 	    restrict: 'A',
 	    link: function(scope, $elm, attrs) {
 	      $elm.on('click', function() {
-
-		      	// var scrolltop = 'scrollTop';
-		      	// var scrollto = parseInt($(this).siblings(".expanded").offset().top);
-		      	// console.log(scrollto);
-		      	// var scrollObject = {};
-		      	// scrollObject[scrolltop] = scrollto;
-		      	// console.log(scrollObject);
-		      	// var scrollObject = {scrollTop: 0};
-		        // $("body").animate(scrollObject, "slow");
+	      	if($window.innerWidth<700) {
+	      		$("body").animate({scrollTop: $(this).offset().top}, "slow");
+	      	}
+	      	else {
 
 		        var openindex = 100;
 		        angular.forEach(scope.tiles, function(thistile, key) {
@@ -522,7 +473,6 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 
 		        var clickedindex = scope.$index;
 
-		       
 
 		        if (clickedindex > openindex) {
 		        	if ((openindex == 0) || (((openindex % 2) == 1) && ((clickedindex % 2) == 0))) {
@@ -534,8 +484,6 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 		        	else {
 		        		$("body").animate({scrollTop: $(this).offset().top -200}, "slow");
 		        	}
-
-
 		        }
 		        else {
 		        	if((clickedindex == 1) || (clickedindex == 3)) {
@@ -545,18 +493,11 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 		        		$("body").animate({scrollTop: $(this).offset().top}, "slow");
 		        	}
 		        }
-		        
-
-		        // $("body").animate({scrollTop: $(this).offset().top - 550}, "slow");
-
-		        
-		      
-
-
+		    }
 	      });
 	    }
   	}
-})
+}])
 
 
 .animation('.slide-animation', function () {
