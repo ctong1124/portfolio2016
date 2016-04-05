@@ -29,9 +29,16 @@ config(['$routeProvider', function($routeProvider) {
 	}
 
 })
-.controller('ctrl', function($scope, $rootScope){
+.controller('ctrl',['$scope', function($scope, $rootScope){
 	  $rootScope.$on('$routeChangeStart', function(event, currRoute, prevRoute){
 		$rootScope.animation = currRoute.animation;
 	  });
-	})
+	
+
+	// console.log("getting here");
+
+	
+
+	
+}])
 ;

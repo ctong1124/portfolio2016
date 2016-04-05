@@ -350,6 +350,7 @@ body {
   -moz-transition: color .25s ease;
   -o-transition: color .25s ease;
   transition: color .25s ease;
+  
 }
 
 .header a:hover {
@@ -363,7 +364,10 @@ body {
 
 #work .banner {
   /*background-color: #C2D3CD;*/
-  background-color: #08090A;
+  background: #C2D3CD; 
+  background: -webkit-linear-gradient(to left,#C2D3CD , #D4D3DD); 
+  background: linear-gradient(to left, #C2D3CD , #D4D3DD);
+  /*background-color: #08090A;*/
   padding: 10em 0 9em 0;
   /*text-align: center;*/
 }
@@ -394,7 +398,7 @@ body {
 #work .banner h6 {
   margin-left: .5em ;
   font-style: italic;
-  color: #9FA4A9;
+  color: #F4F7F5;
   font-size: 1.2em;
 }
 
@@ -758,8 +762,8 @@ body {
 
 /*experience*/
 #exp .section-fixed {
-  width:65%;
-  padding-left: 5em;
+  width:70%;
+  padding-left: 8em;
 }
 
 #exp .exp-description {
@@ -793,9 +797,33 @@ body {
 }
 
 #exp p.skipto {
-  cursor:pointer;
+  /*cursor:pointer;*/
 
 
+}
+
+#exp .resume {
+  float: right;
+  display: block;
+  padding-right: 6em;
+}
+
+#exp .resume p {
+  text-transform: uppercase;
+  font-size: .75em;
+  color: #C2D3CD;
+  -webkit-transition:color .25s ease;
+  -moz-transition: color .25s ease;
+  -o-transition: color .25s ease;
+  transition: color .25s ease;
+}
+
+#exp .resume p:hover {
+  color: #F4F7F5;
+}
+
+#exp .resume a {
+  text-decoration: none;
 }
 
 
@@ -812,7 +840,7 @@ body {
 }
 
 #exp .s-exp:hover,
-#exp .s-skills:hover
+#exp .s-skills:hover,
 #exp .s-edu:hover {
   color: #F4F7F5;
 }
@@ -1468,6 +1496,15 @@ html, body {
 
 #exp .section-fixed {
   width: 85%;
+  padding: 0;
+}
+
+#exp .fixed-skip {
+  display: none;
+}
+
+#exp .resume {
+  display: none;
 }
 
 #exp .education .school, 
@@ -1487,6 +1524,10 @@ html, body {
 #skills .int,
 #skills .adv {
   display: none;
+}
+
+#skills .section-fixed {
+  padding-left: 0;
 }
 
 #contact .e-mail h1 {

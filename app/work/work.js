@@ -21,7 +21,7 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 	//window width
 	$scope.screenWidth = $window.innerWidth;
 	
-   	console.log($scope.screenWidth);
+   	// console.log($scope.screenWidth);
 
    	// resize pictures in slider for mobile
    	$scope.picstyles = function(tile) {
@@ -67,7 +67,7 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 			cover: "img/spot/spot_iphone.jpg",
 			cover_size:"60em 40em, cover",
 			cover_pos: "80% 50%",
-			descrip: "Spot is the front-end prototype of a collaborative music playlist web application. It is designed for party-goers who can independently add a song to the playlist on their own mobile devices and downvote and upvote songs on the playlist. Spot was a group project for a Human-Computer Interaction course where the entire process of design, implementation and evaluation of the product was completed. We went through different techniques such as ethnographic study, requirements analysis, scenario-based design, paper prototyping, computer prototyping, usability analysis and evaluation to develop our user interface.",
+			descrip: "Spot is the front-end prototype of a collaborative music playlist web application. It was designed for party-goers who can independently add songs to a playlist on their mobile device and downvote and upvote songs to determine what plays next. Spot was a group project for a Human-Computer Interaction course where the entire process of design, implementation and evaluation of the product was completed. In developing the site, techinques such as ethnographic study, requirements analysis, scenario-based design, paper prototyping, computer prototyping, usability analysis and evaluation were used to develop the user interface.",
 			haslinks: true,
 			issues: [{
 				"Mobile emulator for site": "http://mobiletest.me/apple_iphone_5/2983587"
@@ -155,7 +155,7 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 			cover: "img/ss/moo_cover.png",
 			cover_size:"60em 30em, cover",
 			cover_pos: "72% 70%",
-			descrip: "I worked at Shutterstock as a graphic design co-op in their Marketing Department, designing digital and print media. I worked closely with the Events staff to design materials and collateral for use in events such as Shutterstock's Pixels of Fury, AIGA's Portfolio Night and WWPI's Wedding and Photography Expo. I spent a lot of time curating Shutterstock assets, including photos and vectors, for use in marketing campaigns.",
+			descrip: "I worked at Shutterstock as a graphic design co-op in their Marketing Department, designing digital and print media. I often collaborated with the Events staff to design materials and collateral for use in events such as Shutterstock's Pixels of Fury, AIGA's Portfolio Night and WWPI's Wedding and Photography Expo. My other responsibilities included curating Shutterstock assets, including photos and vectors, for use in marketing campaigns.",
 			haslinks: false,
 			// issues: [{
 			// 	"Pixels of Fury Notebooks": "https://www.instagram.com/p/0dYKFomAW3/",
@@ -381,7 +381,7 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 	if (typeof $scope.fromExperience === 'string' || $scope.fromExperience instanceof String) {
 		angular.forEach($scope.tiles, function(thistile, key) {
 			if(thistile.idee == $scope.fromExperience) {
-				console.log($scope.fromExperience);
+				// console.log($scope.fromExperience);
 				$scope.click(thistile);
 				// $("body").animate({scrollTop: $("#Tastemakers").offset().top}, "slow");
 				// $('body, html, #Tastemakers').scrollTop(0);
@@ -396,6 +396,18 @@ angular.module('myApp.work', ['ngRoute','ngAnimate'])
 	        return tile.show_title = ! tile.show_title;
 	       
 	    };
+
+	 // $scope.headerHover = function(string) {
+	 // 	console.log("something");
+	 // 	if ( angular.element('#'+string).length ) {
+	 // 		console.log(true);
+	 // 	    return true;
+	 // 	}
+	 // 	else {
+	 // 		console.log(false);
+	 // 		return false;
+	 // 	}
+	 // };
 
 	
 	

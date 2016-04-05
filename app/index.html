@@ -22,14 +22,14 @@
   <div class="section h">
       <div class="header">
           <div class="header-left">
-            <a href="#/work"><h4>Carisa Tong</h4></a>
+            <a ng-class="{'header-hover': true}" href="#/work"><h4>Carisa Tong</h4></a>
           </div>
 
-          <div class="header-right">
-            <a href="#/work">work</a>
-            <a href="#/experience">experience</a>
+          <div class="header-right">  
+            <a ng-class="{'header-hover': headerHover(work)}" href="#/work">work</a>
+            <a ng-class="{'header-hover': headerHover(exp)}" href="#/experience">experience</a>
             <!-- <a href="#/skills">skills</a> -->
-            <a href="#/contact">contact</a>
+            <a ng-class="{'header-hover': headerHover(contact)}" href="#/contact">contact</a>
           </div>
      </div>
   </div>
