@@ -1,3 +1,9 @@
+Portfolio from 2016 built with Angular. 
+
+
+
+
+
 # angular-seed — the seed for AngularJS apps
 
 This project is an application skeleton for a typical [AngularJS](http://angularjs.org/) web app.
